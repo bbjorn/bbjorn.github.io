@@ -1,0 +1,13 @@
+/*Write your CSS below!*/
+
+body{
+    background-color:#55AAff;
+}
+
+h1{
+    color:#FFFFFF;
+}
+
+td{
+    border:2px dashed white;
+}
