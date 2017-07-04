@@ -1,57 +1,77 @@
-/*Write your CSS below!*/
-
-body{
-    background-color:#55AAff;
+body {
+  padding: 0;
+  margin: 0;
+  background: #f7f7f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
 }
 
-h1{
-    color:#FFFFFF;
+/** Header styles **/
+
+.header {
+  background-image: url("mapWithDice.jpg");
+  height: 300px;
+  background-position: center center;
 }
 
-td{
-    border:2px dashed white;
+h1 {
+  
+  color:rgb(3, 130, 80);
+ 
+  font-family: 'Tangerine', sans-serif;
+  font-size: 200px;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 50%;
 }
 
-td:hover{
-	border:2px solid white;
+/** List style **/
+
+h2 {
+  background-color:rgb(3, 150, 100);
+  background-color:rgba(3, 150, 100, 0.75);
+  color: #E4BB97;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-
-/* Ranking of pets: */
-
-div {
-	display: inline-block;
-	margin-left: 5px;
-	height:100px;
-	width:100px;
-	border-radius:100%;
-	border:2px solid black;
-	align:center;
+ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
 }
 
-#best_friend{
-    border:4px solid #00C957;
+li {
+  border-bottom: 1px solid #E4BB97;
+  list-style: none;
+  margin: 100px 0px;
+  padding-bottom: 60px;
 }
 
-.friend{
-    border:2px dashed #008000;
+p {
+  color: #444444;
+  line-height: 32px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
 }
 
-.family{
-    border:2px dashed #0000FF;
-}
-
-.enemy{
-    border:2px dashed #FF0000;
-}
-
-#archnemesis{
-    border:4px solid #CC0000;
-}
-
-.round{
-    display: inline-block;
-	height:100px;
-	width:100px;
-	border-radius:100%;
+a {
+  color: #214E34;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
 }
