@@ -13,9 +13,10 @@ body {
 /** Header styles **/
 
 .header {
-  background-image: url("mapWithDice.jpg");
+  background: url("mapWithDice.jpg") no-repeat center center ;
+  background-attachment: fixed;
   height: 300px;
-  background-position: center center;
+  
 }
 
 h1 {
@@ -40,8 +41,7 @@ h2 {
   font-family: Caudex, serif;
   font-size: 28px;
   font-weight: 500;
-  text-align: center;
-  
+  text-align: center;	
 }
 
 ul {
