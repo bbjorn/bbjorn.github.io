@@ -75,3 +75,58 @@ a {
   text-decoration: none;
   letter-spacing: 2px;
 }
+
+/* Meny stuff */
+/* Listelementen <LI> med knapparna */
+#meny ul {
+    position: -webkit-sticky; /* Safari */
+	position: sticky;
+	text-align: center;
+	/* Ta bort denna och centra istället. */
+    /*margin: 0px 150px;*/	
+	margin: 0 auto;
+    padding: 15px 0 10px 0;
+    /*border-radius: 5px;*/
+    border: #D2CACA;
+    background: #D2CACA;
+    box-shadow: #D2CACA;
+	width: 1200px;	
+}
+
+
+#meny li {
+    display: inline;
+    list-style: none;
+}
+
+#meny li a {
+    margin: 0 70px 0 70px;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 50px;
+    font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    border-radius: 50px;
+    /*margin-right: 140px; flyttade detta så det det görs när du sätter margin i början, plus att det görs lika mycket på båda sidor*/
+}
+
+#meny li a:hover {
+    cursor: pointer;
+    background: #EFE8E8;
+    color: #707070;
+}
+
+#meny a:link,
+#meny a:visited {
+    color: #707070;
+    text-decoration: none;
+}
+
+#meny a:active {
+    color: #EFE8E8;
+}
+
+#meny a#current {
+    background: #EFE8E8;
+}
