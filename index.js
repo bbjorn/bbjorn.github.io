@@ -54,6 +54,8 @@ function calcDoMath(a, b, operator){
         return (numbA + numbB).toString(); 
     } else if (operator == '-'){
         return (numbA - numbB).toString(); 
+    } else if (operator == '*'){
+        return (numbA * numbB).toString(); 
     }
     return NaN;
 }
