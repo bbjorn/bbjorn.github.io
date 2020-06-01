@@ -37,23 +37,23 @@ function calcDecimal(){
  * @param {The type of operator that is going to be preformed} operator 
  */
  function calcOperation(operator){
-    
-    if (displayMemory != '' && displayOperator == '' && displayInput == ''){    //Last operation was equals
-        displayOperator = operator;                                                 //Set operator to + 
-    } else if (displayOperator == ''){                                          //No operation exists yet
-        displayMemory = displayInput;                                               //Move current value to memory
-        displayOperator = operator;                                                 //Set operator to + 
-        displayInput = '';                                                          //Clear current input  
-    } else if (displayOperator != '' && displayInput == ''){                    //if there exists an operation, but no value has been added to it
-        displayOperator = operator;                                                 //Switch operation to + and do nothing else. 
-    } else {                                                                    //There is a calculation in progress
-        displayMemory = calcDoMath(displayMemory, displayInput, displayOperator);   //Then calculate it
-        displayOperator = operator;                                                 //Set operator to +
-        displayInput = '';                                                          //Empty input.
-    }
-    isInteger = true;
-    document.getElementById("calcOutput").innerHTML = displayMemory + displayOperator + displayInput;
-    
+    if (displayMemory != NaN && displayMemory != null){
+        if (displayMemory != '' && displayOperator == '' && displayInput == ''){    //Last operation was equals
+            displayOperator = operator;                                                 //Set operator to + 
+        } else if (displayOperator == ''){                                          //No operation exists yet
+            displayMemory = displayInput;                                               //Move current value to memory
+            displayOperator = operator;                                                 //Set operator to + 
+            displayInput = '';                                                          //Clear current input  
+        } else if (displayOperator != '' && displayInput == ''){                    //if there exists an operation, but no value has been added to it
+            displayOperator = operator;                                                 //Switch operation to + and do nothing else. 
+        } else {                                                                    //There is a calculation in progress
+            displayMemory = calcDoMath(displayMemory, displayInput, displayOperator);   //Then calculate it
+            displayOperator = operator;                                                 //Set operator to +
+            displayInput = '';                                                          //Empty input.
+        }
+        isInteger = true;
+        document.getElementById("calcOutput").innerHTML = displayMemory + displayOperator + displayInput;
+    }   
 }
 
 /** Calculates current active caluation */
