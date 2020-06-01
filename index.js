@@ -1,6 +1,6 @@
 
 let displayMemory = ''; 
-let displayInput = '0'; 
+let displayInput = ''; 
 let displayOperator = '';
 
 /** Takes an number input from a button press */ 
@@ -15,18 +15,18 @@ function calcInput(number) {
 }
 
 /** Sets the operator to addition and in case there already is an active calculation it preforms it */
-function calcAdd(){
+function calcOperation(operator){
     if (displayMemory != '' && displayOperator == '' && displayInput == ''){    //Last operation was equals
-        displayOperator = '+';                                                      //Set operator to + 
+        displayOperator = operator;                                                 //Set operator to + 
     } else if (displayOperator == ''){                                          //No operation exists yet
         displayMemory = displayInput;                                               //Move current value to memory
-        displayOperator = '+';                                                      //Set operator to + 
+        displayOperator = operator;                                                 //Set operator to + 
         displayInput = '';                                                          //Clear current input  
     } else if (displayOperator != '' && displayInput == ''){                    //if there exists an operation, but no value has been added to it
-        displayOperator = '+';                                                      //Switch operation to + and do nothing else. 
+        displayOperator = operator;                                                 //Switch operation to + and do nothing else. 
     } else {                                                                    //There is a calculation in progress
         displayMemory = calcDoMath(displayMemory, displayInput, displayOperator);   //Then calculate it
-        displayOperator = '+';                                                      //Set operator to +
+        displayOperator = operator;                                                 //Set operator to +
         displayInput = '';                                                          //Empty input.
     }
     
@@ -43,6 +43,7 @@ function calcEquals(){
     }
 }
 
+
 /** This where the math happens */
 function calcDoMath(a, b, operator){
     if (a == '') a = 0; 
@@ -50,7 +51,9 @@ function calcDoMath(a, b, operator){
     if (b == '') b = 0;
     else numbB = parseFloat(b);
     if (operator == '+'){
-        return numbA + numbB;; 
+        return (numbA + numbB).toString(); 
+    } else if (operator == '-'){
+        return (numbA - numbB).toString(); 
     }
     return NaN;
 }
