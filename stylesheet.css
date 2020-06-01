@@ -1,3 +1,58 @@
+/* Found this on StackOverflow */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+
+/* The heart of the matter */
+.btn-matrix > .btn:nth-child(3n+4) {
+  clear: left;
+  margin-left: 0;
+}
+.btn-matrix > .btn:nth-child(n+4) {
+  margin-top: -1px;
+}
+.btn-matrix > .btn:first-child {
+  border-bottom-left-radius: 0;
+}
+.btn-matrix > .btn:nth-child(3) {
+  border-top-right-radius: 4px !important;
+}
+.btn-matrix > .btn:nth-last-child(3) {
+  border-bottom-left-radius: 4px !important;
+}
+.btn-matrix > .btn:last-child {
+  border-top-right-radius: 0;
+}
+
+/* Decorations */
+.btn-matrix {
+  margin: 20px;
+}
+
+/* Custom Button */
+.btn-calc{
+  font-family: monospace;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(80, 160, 240);
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 0 9px #999; */
+}
+
+
+.btn-calc:hover {background-color: rgb(80, 160, 240);}
+
+.btn-calc:active {
+  background-color: rgb(80, 160, 240);;
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(4px);
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -6,7 +61,7 @@ body {
   background: -moz-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
-  /* Chrome10-25,Safari5.1-6 */
+  /* Chrome10-25,Safari5.1-6  */
   background: linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
 }
 
@@ -76,7 +131,7 @@ a {
   letter-spacing: 2px;
 }
 
-/* Meny stuff */
+/* Meny stuff * /
 /* Listelementen <LI> med knapparna */
 #meny ul {
     position: -webkit-sticky; /* Safari */
@@ -131,30 +186,3 @@ a {
     background: #EFE8E8;
 }
 
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
-
-/* The heart of the matter */
-.btn-matrix > .btn:nth-child(3n+4) {
-  clear: left;
-  margin-left: 0;
-}
-.btn-matrix > .btn:nth-child(n+4) {
-  margin-top: -1px;
-}
-.btn-matrix > .btn:first-child {
-  border-bottom-left-radius: 0;
-}
-.btn-matrix > .btn:nth-child(3) {
-  border-top-right-radius: 4px !important;
-}
-.btn-matrix > .btn:nth-last-child(3) {
-  border-bottom-left-radius: 4px !important;
-}
-.btn-matrix > .btn:last-child {
-  border-top-right-radius: 0;
-}
-
-/* Decorations */
-.btn-matrix {
-  margin: 20px;
-}
