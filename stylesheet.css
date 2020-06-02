@@ -55,7 +55,7 @@ body {
 /** Header styles **/
 
 .header {
-  background: url("BgDusk.jpg") no-repeat top center ;
+  background: url("img/BgDusk.jpg") no-repeat top center ;
   background-attachment: fixed;
   height: 200px;
   
