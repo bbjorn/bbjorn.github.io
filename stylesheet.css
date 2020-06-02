@@ -35,10 +35,9 @@
   background-color: rgb(155, 175, 190);
 }
 
-
-
-
-
+.subcathegory {
+  background-color: rgb(155, 175, 190);
+}
 
 body {
   padding: 0;
@@ -116,6 +115,35 @@ a {
   text-align: left;
   text-decoration: none;
 }
+
+li {
+  color: #444444;
+  line-height: 32px;
+  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.img-designintro{
+  float: right; 
+  margin-left:15px;
+  width:50%;
+}
+
+.img-designmiddle{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.img-designresults{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
 
 /* Button matrix for the calculator */
 .btn-matrix > .btn:nth-child(4n+5) {
