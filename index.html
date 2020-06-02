@@ -11,21 +11,25 @@
 </head>
 <body>
 
-  <div class="meny">
-	<ul id="meny">
-		<li><a href="#">About me</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Portfolio</a></li>
-	</ul>
-  </div>
+
+
+	<div class="header">
+		<h1>Portfolio</h1>
+	</div>
+
+	<div class="navbar">
+		<ul type="ul" class="ul ul-navbar">
+			<li type="li" class="li li-navbar"><a href="#about">About Me</a></li>	
+			<li type="li" class="li li-navbar"><a class="active" href="#portfolio">Portfolio</a></li>
+			<li type="li" class="li li-navbar"><a href="#contact">Contact</a></li>
+		</ul>
+	</div>
 
   
-  <div class="header">
-    <h1>Portfolio</h1>
-  </div>
 
-  <ul>
-    <li>
+
+  <ul type="ul" class="ul liststyle-ul">
+    <li type="li" class="li liststyle-li">
 		<h2>Calculator</h2>
 		<p>I made this simple calculator in order to freshen up on my html, css and javascript knowledge. It has very simple functionality, but I wanted to make something quick before moving on to more difficult projects.</p>
 		<h3 id="calcOutput">Awaiting Instructions</h3>
@@ -48,7 +52,20 @@
 			<button type="button" class="btn btn-calc" onclick="calcOperation('+')">+</button>
 	  	</div>
 	  
-    </li>
+	</li>
+	<li type="li" class="li liststyle-li">
+		<h2>Procedurally Generated Mountains</h2>
+		<p> This the results of a project I did in an advanced computer graphics course. 
+			It's a procedual generation, based upon a raymarching algorithm. The code is uploaded
+			to a website called Shadertoy, and it can also render it live, which can be found 
+			<a href="https://www.shadertoy.com/view/XsKfzz">here</a>.</p>
+	
+		<a href="https://www.shadertoy.com/view/XsKfzz">
+			<img alt="Procedurally generated mountains" src="3dmountainscropped.png"
+			width="100%">
+		 </a>
+			
+	</li>
   </ul>
 
   <script src="index.js"></script>

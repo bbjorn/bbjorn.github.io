@@ -1,7 +1,123 @@
+
 /* Found this on StackOverflow */
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
 
-/* The heart of the matter */
+/* Navbar menu */
+.ul-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(145, 160, 175);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.li-navbar {
+  float: left;
+}
+
+.li-navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li-navbar a:hover {
+  background-color: rgb(135, 150, 165);
+}
+
+.active {
+  background-color: rgb(155, 175, 190);
+}
+
+
+
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f7f7f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
+  /* Chrome10-25,Safari5.1-6  */
+  background: linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
+}
+
+/** Header styles **/
+
+.header {
+  background: url("BgDusk.jpg") no-repeat top center ;
+  background-attachment: fixed;
+  height: 200px;
+  
+}
+
+h1 {
+  
+  color: rgb(242, 245, 248);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
+  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-size: 120px;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 25%;
+}
+
+/** List style **/
+
+h2 {
+  background-color:rgb(145, 160, 175);
+  background-color:rgba(145, 160, 175, 0.75);
+  color: rgb(242, 245, 248);
+  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;	
+  padding: 2px;
+}
+
+.liststyle-ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+.liststyle-li {
+  border-bottom: 1px solid rgb(145, 160, 175);
+  list-style: none;
+  margin: 100px 0px;
+  padding-bottom: 60px;
+}
+
+p {
+  color: #444444;
+  line-height: 32px;
+  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+a {
+  color: rgb(145, 160, 175);
+  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Button matrix for the calculator */
 .btn-matrix > .btn:nth-child(4n+5) {
   clear: left;
   margin-left: 0;
@@ -38,151 +154,17 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: rgb(80, 160, 240);
+  background-color: rgb(145, 160, 175);
   border: none;
   border-radius: 15px;
   /* box-shadow: 0 9px #999; */
 }
 
 
-.btn-calc:hover {background-color: rgb(80, 160, 240);}
+.btn-calc:hover {background-color: rgb(145, 160, 175);}
 
 .btn-calc:active {
-  background-color: rgb(80, 160, 240);;
+  background-color: rgb(145, 160, 175);;
   /* box-shadow: 0 5px #666; */
   transform: translateY(4px);
 }
-
-body {
-  padding: 0;
-  margin: 0;
-  background: #f7f7f7;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
-  /* Chrome10-25,Safari5.1-6  */
-  background: linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
-}
-
-/** Header styles **/
-
-.header {
-  background: url("mapWithDice.jpg") no-repeat center center ;
-  background-attachment: fixed;
-  height: 200px;
-  
-}
-
-h1 {
-  
-  color:rgb(80, 160, 240);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
-  font-family: 'Uncial Antiqua', serif;
-  font-size: 120px;
-  line-height: 76px;
-  margin: 0;
-  position: relative;
-  text-align: center;
-  top: 25%;
-}
-
-/** List style **/
-
-h2 {
-  background-color:rgb(80, 160, 240);
-  background-color:rgba(80, 160, 240, 0.75);
-  color: #EEDDBB;
-  font-family: Caudex, serif;
-  font-size: 28px;
-  font-weight: 500;
-  text-align: center;	
-}
-
-ul {
-  margin: 0 auto;
-  padding: 0;
-  width: 50%;
-}
-
-li {
-  border-bottom: 1px solid #E4BB97;
-  list-style: none;
-  margin: 100px 0px;
-  padding-bottom: 60px;
-}
-
-p {
-  color: #444444;
-  line-height: 32px;
-  font-family: 'Cardo', sans-serif;
-  font-size: 20px;
-  font-weight: 100;
-}
-
-a {
-  color: #214E34;
-  font-family: 'Cardo', sans-serif;
-  font-size: 13px;
-  font-weight: 900;
-  text-align: left;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-
-/* Meny stuff * /
-/* Listelementen <LI> med knapparna */
-#meny ul {
-    position: -webkit-sticky; /* Safari */
-	position: sticky;
-	text-align: center;
-	/* Ta bort denna och centra istället. */
-    /*margin: 0px 150px;*/	
-	margin: 0 auto;
-    padding: 15px 0 10px 0;
-    /*border-radius: 5px;*/
-    border: #D2CACA;
-    background: #D2CACA;
-    box-shadow: #D2CACA;
-	width: 1200px;	
-}
-
-
-#meny li {
-    display: inline;
-    list-style: none;
-}
-
-#meny li a {
-    margin: 0 70px 0 70px;
-    padding: 5px 20px 5px 20px;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 50px;
-    font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
-    font-size: 25px;
-    border-radius: 50px;
-    /*margin-right: 140px; flyttade detta så det det görs när du sätter margin i början, plus att det görs lika mycket på båda sidor*/
-}
-
-#meny li a:hover {
-    cursor: pointer;
-    background: #EFE8E8;
-    color: #707070;
-}
-
-#meny a:link,
-#meny a:visited {
-    color: #707070;
-    text-decoration: none;
-}
-
-#meny a:active {
-    color: #EFE8E8;
-}
-
-#meny a#current {
-    background: #EFE8E8;
-}
-
