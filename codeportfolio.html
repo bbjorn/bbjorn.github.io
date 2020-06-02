@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua|Cardo:100,500,600,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caudex" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+</head>
+<body>
+
+
+
+	<div class="header">
+		<h1>Portfolio</h1>
+	</div>
+
+	<ul type="ul" class="ul ul-navbar">
+		<li type="li" class="li li-navbar"><a href="index.html">About Me</a></li>
+		<li type="li" class="li li-navbar"><a href="designportfolio.html">Design Portfolio</a></li>	
+		<li type="li" class="li li-navbar"><a class="active" href="codeportfolio.html">Code Portfolio</a></li>
+		<li type="li" class="li li-navbar"><a href="contact.html">Contact</a></li>
+	</ul>
+
+  
+
+
+  <ul type="ul" class="ul liststyle-ul">
+	
+	<li type="li" class="li liststyle-li">
+		<h2>Procedurally Generated Mountains</h2>
+		<p> This the results of a project I did in an advanced computer graphics course. 
+			It's a procedual generation, based upon a raymarching algorithm. The code is uploaded
+			to a website called Shadertoy, and it can also render it live, which can be found 
+			<a href="https://www.shadertoy.com/view/XsKfzz">here</a>.</p>
+	
+		<a href="https://www.shadertoy.com/view/XsKfzz">
+			<img alt="Procedurally generated mountains" src="3dmountainscropped.png"
+			width="100%">
+		 </a>
+			
+	</li>
+	<li type="li" class="li liststyle-li">
+		<h2>Calculator</h2>
+		<p>I made this simple calculator in order to freshen up on my html, css and javascript knowledge. It has very simple functionality, but I wanted to make something quick before moving on to more difficult projects.</p>
+		<h3 id="calcOutput">Awaiting Instructions</h3>
+	  	<div class="btn-group btn-matrix">
+			<button type="button" class="btn btn-calc" onclick="calcInput('1')">1</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('2')">2</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('3')">3</button>
+			<button type="button" class="btn btn-calc" onclick="calcOperation('÷')">÷</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('4')">4</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('5')">5</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('6')">6</button>
+			<button type="button" class="btn btn-calc" onclick="calcOperation('*')">*</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('7')">7</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('8')">8</button>
+			<button type="button" class="btn btn-calc" onclick="calcInput('9')">9</button>
+			<button type="button" class="btn btn-calc" onclick="calcOperation('-')">-</button>	
+			<button type="button" class="btn btn-calc" onclick="calcInput('0')">0</button>
+			<button type="button" class="btn btn-calc" onclick="calcDecimal()">.</button>
+			<button type="button" class="btn btn-calc" onclick="calcEquals()">=</button>
+			<button type="button" class="btn btn-calc" onclick="calcOperation('+')">+</button>
+	  	</div>
+	  
+	</li>
+
+  </ul>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
