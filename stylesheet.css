@@ -198,8 +198,16 @@ footer {
 
 .about-me-grid-container{
   display: grid;
-  grid-template-columns: 40% auto;
-  grid-template-areas: "intro-left intro-right";
+  grid-template-columns: 60% auto;
+  grid-template-areas: "aboutme-left aboutme-right";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.aboutme-left { grid-area: intro-left; }
+
+.aboutme-right { grid-area: intro-right; 
+
 }
 
 .pres-grid-container {
