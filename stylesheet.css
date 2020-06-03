@@ -56,15 +56,14 @@ body {
 .header {
   background: url("img/BgDusk.jpg") no-repeat top center ;
   background-attachment: fixed;
-  height: 200px;
-  
+  padding: 25px;
 }
 
 h1 {
   color: rgb(242, 245, 248);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
   font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 60px;
   margin: 0;
   position: relative;
@@ -92,9 +91,15 @@ h2 {
 }
 
 /* Changes screen width with aspect ratio */
+@media screen and (max-aspect-ratio: 11/10) {
+  .liststyle-ul {
+    width: 75%;
+  }
+}
+
 @media screen and (max-aspect-ratio: 10/11) {
   .liststyle-ul {
-    width: 100%;
+    width: 90%;
   }
 }
 
