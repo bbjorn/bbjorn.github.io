@@ -198,7 +198,7 @@ footer {
 
 .about-me-grid-container{
   display: grid;
-  grid-template-columns: 60% auto;
+  grid-template-columns: 65% auto;
   grid-template-areas: "aboutme-left aboutme-right";
   grid-gap: 10px;
   padding: 10px;
