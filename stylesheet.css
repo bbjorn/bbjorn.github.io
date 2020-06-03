@@ -84,6 +84,13 @@ h2 {
   padding: 2px;
 }
 
+h3 {
+  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 24px;
+  line-height: 28px;
+}
+
 .liststyle-ul {
   margin: 0 auto;
   padding: 0;
@@ -194,6 +201,24 @@ footer {
   grid-template-columns: 40% auto;
   grid-template-areas: "intro-left intro-right";
 }
+
+.pres-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "preslefttop presright" "presleftbottom presright";
+}
+
+.preslefttop { grid-area: preslefttop; }
+
+.presleftbottom {
+  grid-area: presleftbottom; 
+  display: flex;
+  align-items: flex-end;
+}
+
+.presright { grid-area: presright; }
 
 /* Button matrix for the calculator */
 .btn-matrix > .btn:nth-child(4n+5) {
