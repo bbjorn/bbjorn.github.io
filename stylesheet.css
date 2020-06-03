@@ -183,6 +183,12 @@ footer {
 
 .intro-right { grid-area: intro-right; }
 
+.about-me-grid-container{
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-template-areas: "intro-left intro-right";
+}
+
 /* Button matrix for the calculator */
 .btn-matrix > .btn:nth-child(4n+5) {
   clear: left;
