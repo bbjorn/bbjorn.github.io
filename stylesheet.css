@@ -91,6 +91,12 @@ h2 {
 }
 
 /* Changes screen width with aspect ratio */
+@media screen and (max-aspect-ratio: 16/9) {
+  .liststyle-ul {
+    width: 65%;
+  }
+}
+
 @media screen and (max-aspect-ratio: 11/10) {
   .liststyle-ul {
     width: 75%;
