@@ -92,8 +92,8 @@ h2 {
   width: 50%;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+/* Changes screen width with aspect ratio */
+@media screen and (max-aspect-ratio: 10/11) {
   .liststyle-ul {
     width: 100%;
   }
