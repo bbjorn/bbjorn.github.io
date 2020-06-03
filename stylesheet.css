@@ -162,8 +162,9 @@ footer {
 
 .img-designmiddle{
   left:50%;
-  width: 70%;
+  width:70%;
   vertical-align:bottom;
+  max-height:100%;
 }
 
 .img-designresults{
@@ -207,9 +208,7 @@ footer {
 
 .aboutme-left { grid-area: intro-left; }
 
-.aboutme-right { grid-area: intro-right; 
-
-}
+.aboutme-right { grid-area: intro-right;}
 
 .pres-grid-container {
   display: grid;
