@@ -92,6 +92,13 @@ h2 {
   width: 50%;
 }
 
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .liststyle-ul {
+    width: 100%;
+  }
+}
+
 .liststyle-li {
   border-bottom: 1px solid rgb(145, 160, 175);
   list-style: none;
