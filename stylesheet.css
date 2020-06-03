@@ -164,7 +164,6 @@ footer {
   left:50%;
   width:70%;
   vertical-align:bottom;
-  height:auto;
 }
 
 .img-designresults{
@@ -179,6 +178,7 @@ footer {
   grid-template-columns: 50% auto;
   grid-gap: 10px;
   padding: 10px;
+  flex-direction: row;
 }
 
 .grid-container > div {
