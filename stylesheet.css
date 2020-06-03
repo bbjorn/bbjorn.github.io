@@ -183,6 +183,7 @@ footer {
 .grid-container > div {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .intro-grid-container {
