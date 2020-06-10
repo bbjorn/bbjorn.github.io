@@ -20,7 +20,7 @@ export function makeFooter() {
   list.appendChild(
     createListItem(
       "a",
-      "LinkedIn",
+      " LinkedIn",
       "../img/contacticons/LI-In-Bug.png",
       "height:18pt",
       "https://www.linkedin.com/in/bjrn-bergquist/"
@@ -30,7 +30,7 @@ export function makeFooter() {
   list.appendChild(
     createListItem(
       "a",
-      "Email: bjrn.bergqvist@gmail.com",
+      " Email: bjrn.bergqvist@gmail.com",
       "../img/contacticons/email.png",
       "height:18pt",
       "mailto:bjrn.bergqvist@gmail.com"
@@ -40,7 +40,7 @@ export function makeFooter() {
   list.appendChild(
     createListItem(
       "p",
-      "(+46) 073-3809927",
+      " (+46) 073-3809927",
       "../img/contacticons/phone.png",
       "height:18pt"
     )
