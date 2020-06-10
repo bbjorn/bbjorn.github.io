@@ -1,6 +1,5 @@
-
 /* Found this on StackOverflow */
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
 
 /* Navbar menu */
 .ul-navbar {
@@ -46,7 +45,11 @@ body {
   /* Old browsers */
   background: -moz-linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
+  background: -webkit-linear-gradient(
+    45deg,
+    #f7f7f7 0%,
+    rgb(242, 245, 248) 100%
+  );
   /* Chrome10-25,Safari5.1-6  */
   background: linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
 }
@@ -54,15 +57,15 @@ body {
 /** Header styles **/
 
 .header {
-  background: url("img/BgDusk.jpg") no-repeat top center ;
+  background: url("img/BgDusk.jpg") no-repeat top center;
   background-attachment: fixed;
   padding: 25px;
 }
 
 h1 {
   color: rgb(242, 245, 248);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
-  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
   font-size: 50px;
   line-height: 60px;
   margin: 0;
@@ -74,18 +77,18 @@ h1 {
 /** List style **/
 
 h2 {
-  background-color:rgb(145, 160, 175);
-  background-color:rgba(145, 160, 175, 0.75);
+  background-color: rgb(145, 160, 175);
+  background-color: rgba(145, 160, 175, 0.75);
   color: rgb(242, 245, 248);
-  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
   font-size: 28px;
   font-weight: 500;
-  text-align: center;	
+  text-align: center;
   padding: 2px;
 }
 
 h3 {
-  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
   color: #444444;
   font-size: 24px;
   line-height: 28px;
@@ -126,14 +129,14 @@ h3 {
 p {
   color: #444444;
   line-height: 32px;
-  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 100;
 }
 
 a {
   color: rgb(145, 160, 175);
-  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 900;
   text-align: left;
@@ -143,30 +146,30 @@ a {
 li {
   color: #444444;
   line-height: 32px;
-  font-family: 'bree_serifregular', Helvetica, Arial, sans-serif;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 100;
 }
 
 footer {
-  background-color: rgb(235, 240, 245)
+  background-color: rgb(235, 240, 245);
 }
 
-.img-designintro{
-  float: right; 
-  margin-left:15px;
-  width:50%;
+.img-designintro {
+  float: right;
+  margin-left: 15px;
+  width: 50%;
   justify-content: center;
   align-items: center;
 }
 
-.img-designmiddle{
-  left:50%;
-  width:70%;
-  vertical-align:bottom;
+.img-designmiddle {
+  left: 50%;
+  width: 70%;
+  vertical-align: bottom;
 }
 
-.img-designresults{
+.img-designresults {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -194,11 +197,15 @@ footer {
   grid-template-areas: "intro-left intro-right";
 }
 
-.intro-left { grid-area: intro-left; }
+.intro-left {
+  grid-area: intro-left;
+}
 
-.intro-right { grid-area: intro-right; }
+.intro-right {
+  grid-area: intro-right;
+}
 
-.about-me-grid-container{
+.about-me-grid-container {
   display: grid;
   grid-template-columns: 65% auto;
   grid-template-areas: "aboutme-left aboutme-right";
@@ -206,9 +213,13 @@ footer {
   padding: 10px;
 }
 
-.aboutme-left { grid-area: intro-left; }
+.aboutme-left {
+  grid-area: intro-left;
+}
 
-.aboutme-right { grid-area: intro-right;}
+.aboutme-right {
+  grid-area: intro-right;
+}
 
 .pres-grid-container {
   display: grid;
@@ -218,22 +229,26 @@ footer {
   grid-template-areas: "preslefttop presright" "presleftbottom presright";
 }
 
-.preslefttop { grid-area: preslefttop; }
+.preslefttop {
+  grid-area: preslefttop;
+}
 
 .presleftbottom {
-  grid-area: presleftbottom; 
+  grid-area: presleftbottom;
   display: flex;
   align-items: flex-end;
 }
 
-.presright { grid-area: presright; }
+.presright {
+  grid-area: presright;
+}
 
 /* Button matrix for the calculator */
-.btn-matrix > .btn:nth-child(4n+5) {
+.btn-matrix > .btn:nth-child(4n + 5) {
   clear: left;
   margin-left: 0;
 }
-.btn-matrix > .btn:nth-child(n+5) {
+.btn-matrix > .btn:nth-child(n + 5) {
   margin-top: -1px;
 }
 .btn-matrix > .btn:first-child {
@@ -255,7 +270,7 @@ footer {
 }
 
 /* Custom Button */
-.btn-calc{
+.btn-calc {
   font-family: monospace;
   display: inline-block;
   padding: 15px 25px;
@@ -271,11 +286,12 @@ footer {
   /* box-shadow: 0 9px #999; */
 }
 
-
-.btn-calc:hover {background-color: rgb(145, 160, 175);}
+.btn-calc:hover {
+  background-color: rgb(145, 160, 175);
+}
 
 .btn-calc:active {
-  background-color: rgb(145, 160, 175);;
+  background-color: rgb(145, 160, 175);
   /* box-shadow: 0 5px #666; */
   transform: translateY(4px);
 }
