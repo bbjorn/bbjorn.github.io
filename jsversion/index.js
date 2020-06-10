@@ -7,10 +7,10 @@ import { makeFooter } from "./elements/footer.js";
 makeHeader();
 
 const items = [
-  ["index.html", "Start", true],
-  ["aboutme.html", "About Me", false],
-  ["designportfolio.html", "Design Portfolio", false],
-  ["codeportfolio.html", "Code Portfolio", false],
+  ["../index.html", "Start", true],
+  ["../aboutme.html", "About Me", false],
+  ["../designportfolio.html", "Design Portfolio", false],
+  ["../codeportfolio.html", "Code Portfolio", false],
 ];
 
 // Add the navbar
@@ -18,3 +18,6 @@ makeNavBar(items);
 
 // Add the page
 makeStartPage();
+
+// Add the footer
+makeFooter();
