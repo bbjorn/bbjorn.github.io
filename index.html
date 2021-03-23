@@ -1,74 +1,105 @@
-
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <title>Björn Bergqvist Portfolio </title>
-  <link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua|Cardo:100,500,600,800" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Caudex" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="stylesheet.css" />
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <!--
-	<meta http-equiv="refresh" content="0; url='https://bbjorn.github.io/portfolio/'" />
-   -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio Björn Bergqvist</title>
 </head>
 <body>
-
-
-
-	<div class="header">
-		<h1>Interaction Designer and Developer</h1>
-		<h1 style="font-size: 42px">Björn Bergqvist</h1>
-	</div>
-
-	<ul type="ul" class="ul ul-navbar">
-		<li type="li" class="li li-navbar"><a class="active" href="index.html">Start</a></li>
-		<li type="li" class="li li-navbar"><a href="aboutme.html">About Me</a></li>
-		<li type="li" class="li li-navbar"><a href="designportfolio.html">Design Portfolio</a></li>	
-		<li type="li" class="li li-navbar"><a href="codeportfolio.html">Code Portfolio</a></li>
-		<!--<li type="li" class="li li-navbar"><a href="contact.html">Contact</a></li>-->
-	</ul>
-
-  
-
-
-	<ul type="ul" class="ul liststyle-ul">
-		<li type="li" class="li liststyle-li">
-			
-			<div class="pres-grid-container">
-				<div class="preslefttop">
-					<h3 style="font-size: 44px;">Björn Bergqvist</h3>
-					<h3>Interaction Design Graduate</h3>
-				</div>
-				<div class="presleftbottom">
-					<div>
-						<h3>Portfolio</h3>
-						<h3>Selected Examples</h3>
-					</div>
-				</div>
-				<div class="presright">
-					<img src="img/mesquare.jpg" alt="A portrait of me" style="border-radius:50%; width:100%; float: right; margin-left:15px;">
-				</div>
-			  </div>
-			
-			<!--
-			<h3>Björn Bergqvist</h3>
-			<h3>Interaction Design Graduate</h3>
-			<img src="img/VikingSquare.jpg" alt="A portrait of me" style="border-radius:50%; width:60%; float: right; margin-left:15px;">
-			<h3 style="vertical-align: bottom">Portfolio</h3>
-			<h3 style="vertical-align: bottom">Selected Examples</h3>
-			-->
-		</li>
-	</ul>
-
-	<footer>
-		<h2>Contact</h2>
-		<ul type="ul" class="ul liststyle-ul">
-				<a href="https://www.linkedin.com/in/bjrn-bergquist/"><img src="img/contacticons/LI-In-Bug.png" style="height:18pt"> LinkedIn </a></br>
-				<a href="mailto:bjrn.bergqvist@gmail.com"><img src="img/contacticons/email.png" style="height:18pt"> Email: bjrn.bergqvist@gmail.com </a></br>
-				<p><img src="img/contacticons/phone.png" style="height:18pt"> (+46) 073-3809927</p></br>
-				<a href="http://www.freepik.com"><p><small><em>Icons Designed by Freepik</em></small></p></a></br>
-		</ul>
-	</footer>
+    <header class="main-header">
+        <h3 class="logo">Portfolio</h3>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ux">UX Designer</a></li>
+                <li><a href="#educator">Educator</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#contact">Get In Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="hero">
+                <h1 class="clr-primary">Björn Bergquist</h1>
+                <h2 class="shifting">UX Designer</h2>
+                <p>I have just finished writing my master's thesis regarding trust in robotic vacuum cleaners at the department of Design and Human Factors at Chalmers University of Technology. </p>
+            </div>
+        </section>
+        <section class="about bg-prim-dark" id="about">
+            <div><h2>About Me</h2>
+            <h3>How I ended up where I am</h3></div>
+            <div>
+                <p>I have just finished writing my master's thesis regarding trust in robotic vacuum cleaners at the department of Design and Human Factors at Chalmers University of Technology. I have a bachelor's degree in Software Engineering and a master's degree in Interaction Design. I enjoy creating things, both digital och physical.
+                </p>
+                <p>I am a social and creative person who likes to get things done, and my friends have often described me as a ”doer”. </p>
+                <a href="#" class="btn about-btn">Keep Reading</a>
+            </div>
+        </section>
+        <section class="ux bg-light" id="ux">
+            <h2>UX Design Projects</h2>
+            <div class="card">
+                <h3>Robo Pop!</h3>
+                <p> Design installation aimed at making girls (age 12-16) interested in sensory technology and Internet of things.</p>
+                <p> A robotic band controlled either a website or smart household items.</p>
+                <a href="#" class="btn card-btn">Keep Reading</a>
+            </div>
+            <div class="card">
+                <h3>TrainBuddy</h3>
+                <p>To come up with a design for a user group in a certain situation, in our case “immigrants” and “the train”.</p>
+                <p>An app that help immigrants by introducing them to helpful natives on the train.</p>
+                <a href="#" class="btn card-btn">Keep Reading</a>
+            </div>
+            <div class="card">
+                <h3>Access</h3>
+                <p>A company that made paper towel and related products wanted rebrand themselves as more inclusive.</p>
+                <p>An app to help facility managers placing the products to increase inclusivity.</p>
+                <a href="#" class="btn card-btn">Keep Reading</a>
+            </div>
+            <div class="card">
+                <h3>Privacy Coin</h3>
+                <p>Design a tangible interface on the theme of internet safety.</p>
+                <p>An installation that aims to make people think about how they are paying with their personal data by making that transaction tangible.</p>
+                <a href="#" class="btn card-btn">Keep Reading</a>
+            </div>
+        </section>
+        <section class="educator bg-light" id="educator">
+            <h2>Educator</h2>
+            <p>
+                Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research. Education frequently takes place under the guidance of educators, however learners can also educate themselves. Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks, feels, or acts may be considered educational. The methodology of teaching is called pedagogy. 
+            </p>
+            <p>
+                Formal education is commonly divided formally into such stages as preschool or kindergarten, primary school, secondary school and then college, university, or apprenticeship. 
+            </p>
+            <p>
+                A right to education has been recognized by some governments and the United Nations.[a] In most regions, education is compulsory up to a certain age. There is a movement for education reform, and in particular for evidence-based education with global initiatives aimed at achieving the Sustainable Development Goal 4, which promotes quality education for all.     
+            </p>
+            <img src="img/RubberDuctTeacher.jpg" alt="A big blue rubber duck teaching web development to smaller yellow rubber ducks">
+        </section>
+        <section class="code bg-white" id="code">
+            <h2>Developer</h2>
+            <p>I created this website based upon my old portfolio in order to teach myself how to code in react. The CSS and general design is the mostly same in both version, but old one use pure html. Right now the code portfolio is a bit barebones, but the plan is to add more features using external backends to this page. It has a github repository which can be found here.
+            </p><p>
+                In order to learn how to code React with a backend I decided to implement a small app that uses an API from OpenWeather. The icons used are also from OpenWeather. The main focus was on coding during this particular project and I might revisit it and work a bit more on its presentation.
+            </p><p>
+                Also I have developed my own 3D engine that procedually generates mountains. Go look at it on shadertoy. 
+            </p><p>
+                And while you’re at it look at my GitHub as well.  </p>
+                <img src="img/3dmountainscropped.png" alt="A generate 3D landscape with mountains and lakes">
+        </section>
+    </main>
+    <footer id="contact" class="bg-prim-dark">
+        <h2>Get In Touch</h2>
+        <p>Want to have a chat over a cup of tea? Send me a message!</p>
+        <a href="http://" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in"></i></i>
+            LinkedIn</a>
+        <a href="mailto:bjrn.bergqvist@gmail.com"><i class="far fa-envelope"></i>bjrn.bergqvist@gmail.com</a>
+        <a href="tel:+46733809927"><i class="fas fa-phone-alt"></i>(+46) 073 - 380 99 27</a>
+    </footer>
 </body>
 </html>

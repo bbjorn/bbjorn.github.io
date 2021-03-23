@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+    --clr-black: black;
+    --clr-dark: #262626;
+    --clr-light: #EEE;
+    --clr-white: white;
+    --clr-primary-dark: #2A3A54;
+    --clr-primary: #4A6E9E;
+    --clr-primary-light: #6a94cb;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--clr-white);
+	font-family: 'Roboto', 'Work Sans', sans-serif;
+	font-weight: 400;
+    color: var(--clr-dark);
+}
+
+section{
+    padding: 2em 2em;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Colours */
+
+.bg-prim-dark{
+    background: var(--clr-primary-dark);
+    color: var(--clr-light)
+}
+
+.bg-light{
+    background: var(--clr-light);
+    color: var(--clr-dark)
+}
+
+.bg-white{
+    background: var(--clr-white);
+    color: var(--clr-dark)
+}
+
+.clr-primary{
+    color: var(--clr-primary)
+}
+
+/* Typography */
+
+h1, h2, h3{
+    line-height: 1;
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1.75rem;
+}
+
+p{
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* navigation styles start here */
+
+.main-header{
+    background: var(--clr-primary-dark);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.main-header h3{
+    color: var(--clr-light);
+    margin: 0.6em;
+}
+
+nav {
+    background: var(--clr-primary-dark);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: var(--clr-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppsercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover,nav a:focus{
+    color: var(--clr-primary-light)
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: var(--clr-light);
+    height: 3px;
+    width: 2em;
+    border-radius: 3px;
+    position: relative;
+
+    transition-property: transform opacity background-color;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 1s;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+    background: transparent;
+    transform: rotate(180deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before{
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle:checked ~ .nav-toggle-label span::after{
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media screen and (min-width: 800px){
+    .nav-toggle-label{
+        display: none;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo{
+        grid-column: 2/span 1;
+    }
+
+    nav{
+        all: unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul{
+        display: flex;
+    }
+
+    nav li{
+        margin-left: 2em;
+        margin-bottom: 0;
+    }
+
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before{
+        content: '';
+        height: 5px;
+        background: var(--clr-primary-light);
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before,nav a:focus::before{
+        transform: scale(1, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+}
+
+/* Intro */
+.intro{
+    margin-top: 3em;
+    padding:0;
+}
+
+.hero{
+    padding: 2em;
+    position: relative;
+}
+
+.hero::after{
+    
+    content:"";
+    background-image:  url("../img/mesquare.jpg");
+    opacity: 0.4;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0%;
+    left: 0%;
+    z-index: -999;
+}
