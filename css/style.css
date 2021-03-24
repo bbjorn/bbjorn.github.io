@@ -421,10 +421,15 @@ nav a:hover,nav a:focus{
 
 .about-content{
     padding: 2em 2em;
+    
+}
+
+.about-content div{
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    
 }
 
 .about-btn{
@@ -466,13 +471,21 @@ nav a:hover,nav a:focus{
         border-left: 1px solid var(--clr-light)
     }
 
+    .about-content div{
+        max-width: max-content;
+    }
+
     .about-content p{
         text-align: left;
     }
+
+    
 }
 
 /* Common for the sections */ 
-.ux, 
+.ux{
+    padding: 2em 0.5em;
+}
 .educator, 
 .code{
     padding: 2em 2em;
@@ -549,7 +562,7 @@ nav a:hover,nav a:focus{
     color: var(--card-clr);
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
-    padding: 0em 1.52em 4em;
+    padding: 0em 1.5em 4em;
     height: 100%;
     position: relative;
 }
