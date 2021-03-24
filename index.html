@@ -9,17 +9,16 @@
 </head>
 <body>
     <header class="main-header">
-        <h3 class="logo">Portfolio</h3>
+        <a href="#"><h3 class="logo">Portfolio</h3></a>
         <input type="checkbox" class="nav-toggle" id="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#ux">UX Designer</a></li>
+                <li><a href="#ux">Designer</a></li>
                 <li><a href="#educator">Educator</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#contact">Get In Touch</a></li>
+                <li><a href="#code">Developer</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -32,9 +31,11 @@
             </div>
         </section>
         <section class="about bg-prim-dark" id="about">
-            <div><h2>About Me</h2>
-            <h3>How I ended up where I am</h3></div>
-            <div>
+            <div class="about-intro">
+                <h2>About Me</h2>
+                <h3>How I ended up where I am</h3>
+            </div>
+            <div class="about-content">
                 <p>I have just finished writing my master's thesis regarding trust in robotic vacuum cleaners at the department of Design and Human Factors at Chalmers University of Technology. I have a bachelor's degree in Software Engineering and a master's degree in Interaction Design. I enjoy creating things, both digital och physical.
                 </p>
                 <p>I am a social and creative person who likes to get things done, and my friends have often described me as a ”doer”. </p>
@@ -68,7 +69,7 @@
                 <a href="#" class="btn card-btn">Keep Reading</a>
             </div>
         </section>
-        <section class="educator bg-light" id="educator">
+        <section class="educator bg-white" id="educator">
             <h2>Educator</h2>
             <p>
                 Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research. Education frequently takes place under the guidance of educators, however learners can also educate themselves. Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks, feels, or acts may be considered educational. The methodology of teaching is called pedagogy. 
@@ -81,7 +82,7 @@
             </p>
             <img src="img/RubberDuctTeacher.jpg" alt="A big blue rubber duck teaching web development to smaller yellow rubber ducks">
         </section>
-        <section class="code bg-white" id="code">
+        <section class="code bg-light" id="code">
             <h2>Developer</h2>
             <p>I created this website based upon my old portfolio in order to teach myself how to code in react. The CSS and general design is the mostly same in both version, but old one use pure html. Right now the code portfolio is a bit barebones, but the plan is to add more features using external backends to this page. It has a github repository which can be found here.
             </p><p>
