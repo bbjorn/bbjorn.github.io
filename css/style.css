@@ -343,15 +343,11 @@ nav a:hover,nav a:focus{
 }
 
 .hero h2::after{
-    content: "UX designer";
+    content: "UX Designer";
     animation: topToBottom 6s infinite 0s;
 }
 
 @keyframes topToBottom {
-  0% {
-    content: "UX Designer";
-  }
-
   33% {
     content: "Educator";
   }
@@ -360,6 +356,7 @@ nav a:hover,nav a:focus{
     content: "Developer";
   }
 }
+
 @media screen and (min-width: 880px){
     .hero::after{
         opacity: 1;
