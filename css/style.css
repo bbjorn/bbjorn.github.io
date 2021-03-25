@@ -344,9 +344,9 @@ nav a:hover,nav a:focus{
 
 .hero h2::after{
     content: "UX Designer";
-    -webkit-animation: webkit-topToBottom 9s infinite 0s;
-    -moz-animation: moz-topToBottom 9s infinite 0s;
-    -o-animation: o-topToBottom 9s infinite 0s;
+    -webkit-animation: topToBottom 9s infinite 0s;
+    -moz-animation: topToBottom 9s infinite 0s;
+    -o-animation: topToBottom 9s infinite 0s;
     animation: topToBottom 9s infinite 0s;
 }
 
@@ -360,7 +360,7 @@ nav a:hover,nav a:focus{
   }
 }
 
-@-webkit-keyframes webkit-topToBottom {
+@-webkit-keyframes topToBottom {
     33% {
       content: "Educator";
     }
@@ -372,7 +372,7 @@ nav a:hover,nav a:focus{
   
 
 
-@-moz-keyframes moz-topToBottom {
+@-moz-keyframes topToBottom {
     33% {
       content: "Educator";
     }
@@ -383,7 +383,7 @@ nav a:hover,nav a:focus{
   }
   
 
-@-o-keyframes o-topToBottom {
+@-o-keyframes topToBottom {
     33% {
       content: "Educator";
     }
