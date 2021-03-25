@@ -115,6 +115,26 @@ p{
     max-width: 50ch;
 }
 
+.txt-underline{
+    --underline-clr: var(--clr-primary);
+    color: var(--underline-clr);
+    position: relative;
+    max-width: max-content;
+    margin-inline: auto;
+}
+
+.txt-underline::after{
+    
+    background-color: var(--underline-clr);
+    content: "";
+    position: absolute;
+    bottom: -0.125em;
+    left:0;
+    width: 100%;
+    height: 2px;
+    
+}
+
 /* navigation styles start here */
 
 .main-header{
@@ -348,11 +368,14 @@ nav a:hover,nav a:focus{
     }
 
     .hero::after{
-        z-index: 2;
+        z-index: 1;
         opacity: 1;
 
         bottom: -1.5em;
         right: -1.5em;
+        left: 60%;
+        
+        clip-path: polygon(66% 21%, 62% 56%, 89% 76%, 98% 100%, 0 100%, 0 17%, 45% 4%);
     }
 
     .hero h1{
@@ -374,11 +397,19 @@ nav a:hover,nav a:focus{
     .hero p{
         max-width: 60ch;
     }
+
+    .hero::after{
+        clip-path: polygon(61% 22%, 55% 59%, 82% 79%, 86% 100%, 0 100%, 0 17%, 42% 4%);
+    }
 }
 
 @media screen and (min-width: 1200px){
     .hero p{
         max-width: 70ch;
+    }
+
+    .hero::after{
+        clip-path: polygon(48% 17%, 51% 59%, 67% 80%, 73% 100%, 0 100%, 0 17%, 26% 0);
     }
 }
 
@@ -500,27 +531,6 @@ nav a:hover,nav a:focus{
 .code{
     padding: 2em 2em;
 }
-
-.txt-underline{
-    --underline-clr: var(--clr-primary);
-    color: var(--underline-clr);
-    position: relative;
-    max-width: max-content;
-    margin-inline: auto;
-}
-
-.txt-underline::after{
-    
-    background-color: var(--underline-clr);
-    content: "";
-    position: absolute;
-    bottom: -0.125em;
-    left:0;
-    width: 100%;
-    height: 2px;
-    
-}
-
 
 .ux img, 
 .educator img, 
