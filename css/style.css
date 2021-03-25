@@ -120,7 +120,8 @@ p{
     color: var(--underline-clr);
     position: relative;
     max-width: max-content;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .txt-underline::after{
