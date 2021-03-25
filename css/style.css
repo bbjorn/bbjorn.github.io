@@ -501,26 +501,26 @@ nav a:hover,nav a:focus{
     padding: 2em 2em;
 }
 
-.ux h2, 
-.educator h2, 
-.code h2{
-    color: var(--clr-primary);
+.txt-underline{
+    --underline-clr: var(--clr-primary);
+    color: var(--underline-clr);
     position: relative;
     max-width: max-content;
     margin-inline: auto;
 }
 
-.ux h2::after, 
-.educator h2::after, 
-.code h2::after{
+.txt-underline::after{
+    
+    background-color: var(--underline-clr);
     content: "";
     position: absolute;
     bottom: -0.125em;
     left:0;
     width: 100%;
     height: 2px;
-    background-color: var(--clr-primary);
+    
 }
+
 
 .ux img, 
 .educator img, 
@@ -699,4 +699,41 @@ nav a:hover,nav a:focus{
         max-width: 50ch; 
         height: 100%;
     }
+}
+
+/* Footer */ 
+footer{
+    padding: 1em 1.5em; 
+}
+
+footer .txt-underline{
+    --underline-clr: var(--clr-light);
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    max-width: 50ch;
+    margin: 2rem auto;
+}
+
+footer a{
+    text-decoration: none;
+    padding: 0 auto;
+}
+
+footer i{
+    margin: 0 1rem;
+    background-color: var(--clr-light);
+    color: var(--clr-primary-dark);
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+footer a:focus i,
+footer a:hover i{
+    background-color: var(--clr-primary-light);
 }
