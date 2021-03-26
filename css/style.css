@@ -1,3 +1,18 @@
+/* ---------- Index ---------- */ 
+/*  1. General                 */ 
+/*  2. Colours                 */
+/*  3. Typography              */
+/*  4. Navigation styles       */
+/*  5. Intro                   */
+/*  6. About                   */ 
+/*  7. Common for the sections */ 
+/*  8. Cards                   */ 
+/*  9. Educator and Code       */ 
+/* 10. Footer                  */ 
+/* --------------------------- */ 
+
+
+/* 1. General */ 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
 :root {
@@ -7,7 +22,7 @@
     --clr-white: white;
     --clr-primary-dark: #2A3A54;
     --clr-primary: #4A6E9E;
-    --clr-primary-light: #6a94cb;
+    --clr-primary-light: #cddbec;
     --clr-overlay-brighten: rgba(255, 255, 255, 0.20);
     --clr-overlay-darken: rgba(0, 0, 0, 0.15);
     --clr-overlay-darken-30: rgba(0, 0, 0, 0.30);
@@ -65,7 +80,7 @@ img{
   
 
 
-/* Colours */
+/* 2. Colours */
 
 .bg-prim-dark{
     background: var(--clr-primary-dark);
@@ -86,7 +101,7 @@ img{
     color: var(--clr-primary)
 }
 
-/* Typography */
+/* 3. Typography */
 
 h1, h2, h3{
     line-height: 1;
@@ -130,13 +145,13 @@ p{
     content: "";
     position: absolute;
     bottom: -0.125em;
-    left:0;
-    width: 100%;
+    left: -0.25em;
+    right: -0.25em;
     height: 2px;
     
 }
 
-/* navigation styles start here */
+/* 4. Navigation */
 
 .main-header{
     background: var(--clr-primary-dark);
@@ -154,6 +169,11 @@ p{
 .main-header h3{
     color: var(--clr-light);
     margin: 0.6em;
+}
+
+.main-header h3:focus,
+.main-header h3:hover{
+    color: var(--clr-primary-light);
 }
 
 nav {
@@ -311,7 +331,7 @@ nav a:hover,nav a:focus{
 
 }
 
-/* Intro */
+/* 5. Intro */
 .intro{
     margin-top: 3em;
     padding:0;
@@ -540,7 +560,7 @@ nav a:hover,nav a:focus{
 
     .about-intro h3::before{
         right: 0;
-        left: 20%;
+        left: max(1rem, calc(100% - 30ch));
     }
 
     .about-intro h3{
@@ -557,7 +577,6 @@ nav a:hover,nav a:focus{
 
     .about-content p{
         text-align: left;
-        max-width: 60ch;
     }
 }
 
@@ -566,13 +585,9 @@ nav a:hover,nav a:focus{
         background-repeat: no-repeat;
         background-position: right;
     }
-    
-    .about-content p{
-        max-width: 70ch;
-    }
 }
 
-/* Common for the sections */ 
+/* 7. Common for the sections */ 
 .ux{
     padding: 2em 0.5em;
 }
@@ -587,7 +602,7 @@ nav a:hover,nav a:focus{
     border-radius: 0.5em;
 }
 
-/* Cards */ 
+/* 8. Cards */ 
 .card{
     --card-clr: var(--clr-light);
     --card-bg-clr: #BD558D;
@@ -711,7 +726,6 @@ nav a:hover,nav a:focus{
     border-radius: 0;
 }
 
-
 .card-access{
     --card-clr: var(--clr-dark);
     --card-bg-clr: #EB9561;
@@ -756,7 +770,7 @@ nav a:hover,nav a:focus{
     }
 }
 
-/* educator and code */ 
+/* 9. Educator and Code */ 
 .educator img,
 .code img{
     width: 100%;
@@ -819,7 +833,7 @@ nav a:hover,nav a:focus{
     }
 }
 
-/* Footer */ 
+/* 10. Footer */ 
 footer{
     padding: 1em 1.5em; 
 }
@@ -849,6 +863,7 @@ footer i{
     padding: 1rem;
     border-radius: 50%;
     font-size: 1.5rem;
+    transition: background-color 250ms ease-in-out;
 }
 
 footer a:focus i,
