@@ -596,7 +596,7 @@ nav a:hover,nav a:focus{
 .card{
     --card-clr: var(--clr-light);
     --card-bg-clr: #BD558D;
-    --card-img: url("../img/robopop/rp-finished.png");   
+    --card-img: url("../img/robopop/rp-cover-band.jpg");   
     background-color: var(--clr-white);
     margin: 2em auto;
     display: flex;
@@ -606,9 +606,16 @@ nav a:hover,nav a:focus{
     max-width: 24em;
 }
 
+.card-svg{
+    stroke: var(--card-clr);
+    stroke-width:0.25mm;
+    fill:var(--card-clr);
+    z-index: 10;
+}
+
 .card-top{
     background-image:
-        linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--card-bg-clr)),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 33%, var(--card-bg-clr)),
         var(--card-img);
     background-size: auto 100%;
     background-position: center;
@@ -623,6 +630,7 @@ nav a:hover,nav a:focus{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1em;
 }
 
 .card-top h3{
@@ -653,16 +661,66 @@ nav a:hover,nav a:focus{
     right: 15%;
 }
 
+.card-robopop .card-top{
+    padding: 3em;
+    background-image:
+        linear-gradient(to bottom, rgba(189, 85, 141, 0.5) 33%, var(--card-bg-clr)),
+        var(--card-img);
+}
+
+.card-robopop .card-top::after{
+    content: "";
+    
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
 .card-trainbuddy{
     --card-clr: var(--clr-dark);
     --card-bg-clr: #9fd05a;
-    --card-img: url("../img/trainbuddy/trainbuddy-logo.png");   
+    --card-img: url("../img/trainbuddy/tb-logo-cropped.PNG");   
 }
+
+.card-trainbuddy .card-top{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                  var(--card-img);
+
+    background-size: 85%;
+    position: relative;  
+    z-index: 1;  
+}
+
+.card-trainbuddy .card-top::before{
+    content: "";
+    position:absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 33%, var(--card-bg-clr));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 0;
+}
+
+.card-trainbuddy img{
+    padding: 1em;
+    z-index: 2;
+    border-radius: 0;
+}
+
 
 .card-access{
     --card-clr: var(--clr-dark);
     --card-bg-clr: #EB9561;
     --card-img: url("../img/access/ac-customerjourney-trans.png"); 
+  
 }
 
 .card-access .card-top{
@@ -677,7 +735,7 @@ nav a:hover,nav a:focus{
 
 .card-privacy .card-top{
     background-image:
-    linear-gradient(to bottom, rgba(37, 103, 128, 0.5), var(--card-bg-clr)),
+    linear-gradient(to bottom, rgba(37, 103, 128, 0.5) 33%, var(--card-bg-clr)),
     var(--card-img);
 
 }
