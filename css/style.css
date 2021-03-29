@@ -582,8 +582,13 @@ nav a:hover,nav a:focus{
 
 @media screen and (min-width: 2400px){
     .about-intro{
+        background-image: 
+        linear-gradient(to left, transparent 2200px, var(--clr-primary-dark) 2504px),
+         url("../img/BgDusk.jpg");
         background-repeat: no-repeat;
         background-position: right;
+        background-size:  auto auto;
+        background-blend-mode: normal;
     }
 }
 
