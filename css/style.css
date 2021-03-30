@@ -104,7 +104,7 @@ img{
 /* 3. Typography */
 
 h1, h2, h3{
-    line-height: 1;
+    line-height: 1.1;
     text-align: center;
 }
 
@@ -124,7 +124,6 @@ h3{
 }
 
 p{
-    text-align: center;
     margin: 1em auto;
     line-height: 1.6;
     max-width: 50ch;
@@ -619,6 +618,7 @@ nav a:hover,nav a:focus{
     border-radius: 2em;
     box-shadow: 2px 2px 2px var(--clr-overlay-darken-30);
     max-width: 18em;
+    text-align: center;
 }
 
 .card-svg{
@@ -807,7 +807,6 @@ nav a:hover,nav a:focus{
     
     .educator p,
     .code p{
-        text-align: left;
         max-width: 50ch;
         margin-block: 0;
     }
@@ -841,6 +840,7 @@ nav a:hover,nav a:focus{
 /* 10. Footer */ 
 footer{
     padding: 1em 1.5em; 
+    text-align: center;
 }
 
 footer .txt-underline{
