@@ -126,7 +126,7 @@ h3{
 p{
     text-align: center;
     margin: 1em auto;
-    line-height: 1.4;
+    line-height: 1.6;
     max-width: 50ch;
 }
 
@@ -594,11 +594,11 @@ nav a:hover,nav a:focus{
 
 /* 7. Common for the sections */ 
 .ux{
-    padding: 2em 0.5em;
+    padding: 2em 0.5em 4em;
 }
 .educator, 
 .code{
-    padding: 2em 2em;
+    padding: 2em 2em 6em;
 }
 
 .ux img, 
