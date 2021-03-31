@@ -34,7 +34,7 @@
 
 body {
 	margin: 0;
-	background: var(--clr-white);
+	background: var(--clr-light);
 	font-family: 'Roboto', 'Work Sans', sans-serif;
 	font-weight: 400;
     color: var(--clr-dark);
@@ -567,7 +567,8 @@ nav a:hover,nav a:focus{
     }
 
     .about-content{
-        border-left: 1px solid var(--clr-light)
+        border-left: 1px solid var(--clr-light);
+        padding: 3em 1.5em 2em;
     }
 
     .about-content div{
