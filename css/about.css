@@ -504,11 +504,10 @@ nav a:hover,nav a:focus{
 
 .motivation .btn{
     --btn-clr: var(--clr-primary-dark);
-    background: var(--clr-primary);
-    color: var(--clr-white);
+    background: var(--clr-white);
     width: 16em;
     margin: 0 auto;
-    border: 4px var(--btn-clr) solid;
+    /*border: 4px var(--btn-clr) solid;*/
 }
 
 /* 10. Footer */ 
