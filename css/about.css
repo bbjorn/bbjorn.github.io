@@ -447,15 +447,14 @@ nav a:hover,nav a:focus{
 @media screen and (min-width: 1000px){
     .about{
         padding-top: 0;
+        margin: 1.5em 1.5em 0;
     }
 
     .about-content{
-        padding-top: 0;
+        padding-top: .5em;
     }
 
-    .about-content p:first-of-type{
-        margin-top: .5em;
-    }
+
 }
 
 /* 7. About-Continued */
