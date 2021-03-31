@@ -448,6 +448,14 @@ nav a:hover,nav a:focus{
     .about{
         padding-top: 0;
     }
+
+    .about-content{
+        padding-top: 0;
+    }
+
+    .about-content p:first-of-type{
+        margin-top: .5em;
+    }
 }
 
 /* 7. About-Continued */
