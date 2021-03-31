@@ -6,7 +6,7 @@
 /*  5. Intro                   */
 /*  6. About                   */ 
 /*  7. Common for the sections */ 
-/*  8. Cards                   */ 
+/*  8. UX Cards                */ 
 /*  9. Educator and Code       */ 
 /* 10. Footer                  */ 
 /* --------------------------- */ 
@@ -606,7 +606,11 @@ nav a:hover,nav a:focus{
     border-radius: 0.5em;
 }
 
-/* 8. Cards */ 
+/* 8. UX Cards */ 
+.ux-text{
+    margin: 0 1.5em;
+}
+
 .card{
     --card-clr: var(--clr-light);
     --card-bg-clr: #BD558D;
