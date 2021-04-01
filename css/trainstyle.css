@@ -19,7 +19,7 @@
     --clr-dark: #262626;
     --clr-light: #EEE;
     --clr-white: white;
-    --clr-primary-dark: #6c9336;
+    --clr-primary-dark: #6ca02f;
     --clr-primary: #9fd05a;
     --clr-primary-light: #daecc0;
     --clr-overlay-brighten: rgba(255, 255, 255, 0.20);
@@ -338,7 +338,7 @@ nav a:hover,nav a:focus{
         border: var(--clr-primary-dark) 1.5em solid;
         box-sizing: border-box;
         max-width: 1000px;
-        margin: 5em auto;
+        margin: 8em auto 5em;
         
         display: flex;
         flex-direction: column;

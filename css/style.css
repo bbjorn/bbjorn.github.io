@@ -702,8 +702,8 @@ nav a:hover,nav a:focus{
 }
 
 .card-trainbuddy{
-    --card-clr: var(--clr-dark);
-    --card-bg-clr: #9fd05a;
+    --card-clr: var(--clr-light);
+    --card-bg-clr: #6ca02f;
     --card-img: url("../img/trainbuddy/tb-logo-cropped.PNG");   
 }
 
@@ -737,7 +737,7 @@ nav a:hover,nav a:focus{
 }
 
 .card-access{
-    --card-clr: var(--clr-dark);
+    --card-clr: var(--clr-light);
     --card-bg-clr: #EB9561;
     --card-img: url("../img/access/ac-customerjourney-trans.png"); 
   
