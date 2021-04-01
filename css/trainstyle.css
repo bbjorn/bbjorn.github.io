@@ -19,9 +19,9 @@
     --clr-dark: #262626;
     --clr-light: #EEE;
     --clr-white: white;
-    --clr-primary-dark: #AD5183;
-    --clr-primary: #C76E9E;
-    --clr-primary-light: #f8e3ee;
+    --clr-primary-dark: #6c9336;
+    --clr-primary: #9fd05a;
+    --clr-primary-light: #daecc0;
     --clr-overlay-brighten: rgba(255, 255, 255, 0.20);
     --clr-overlay-darken: rgba(0, 0, 0, 0.15);
     --clr-overlay-darken-30: rgba(0, 0, 0, 0.30);
@@ -353,41 +353,53 @@ nav a:hover,nav a:focus{
 /* 6. Intro */ 
 
 .intro{
-    padding-top: 2em;
+    padding: 4em 0 0;
+    background-color: rgba(255, 255, 255, 1)
 }
 
 .intro-headers{
-    background-image:
-    linear-gradient(to bottom, rgba(189, 85, 141, 0.5) 0%, rgba(189, 85, 141, 0.5) 100%),
-        url("../img/robopop/rp-cover-band.jpg");
-    background-size: 100% auto;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url("../img/trainbuddy/tb-logo-cropped.PNG");
+    background-size: auto 85%;
     background-position: center center;
-    padding: 4em 2em 2em;
+    background-repeat: no-repeat;
     border-bottom: var(--clr-light) 2px solid;
     color: var(--clr-white);
-
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    min-height: 12em;
 }
 
-.intro-svg{
-    stroke: var(--clr-light);
-    stroke-width:0.25mm;
-    fill: var(--clr-light);
-    z-index: 10;
-}
+.intro-headers::before{
+    content: "";
+    position:absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 33%, var(--clr-primary-dark));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
+    z-index: 0;
+}
 
 .intro-headers h3{
     position: relative;
     z-index: 1;
     font-size: 1.25rem;
-   
+}
+
+.intro-headers img{
+    max-width: 80%;
 }
 
 .intro-content{
     padding: 1em 2em;
+    background-color:  var(--clr-primary-dark);
     
 }
 
@@ -400,11 +412,24 @@ nav a:hover,nav a:focus{
         display: grid;
         grid-template-columns: 50% 50%;
         padding-top: 0;
+        background-color: var(--clr-primary-dark);
     }
 
     .intro-headers{
         border-bottom: none;
-        background-size: auto 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.0) 100%);
+        background-size: 100% auto;
+        border-right: 1px solid white;
+    }
+
+    .intro-headers::before{
+        background-size: 100% auto;
+        background-image: url("../img/trainbuddy/trainbuddy-logo.png");
+        opacity: 1;
+    }
+
+    .intro-headers img{
+        display: none;
     }
 
     .intro-headers h2{
@@ -421,7 +446,9 @@ nav a:hover,nav a:focus{
         text-align: right;
     }
 
-
+    .intro-content{
+        border-left: 1px solid white;
+    }
 
     .intro-content div{
         max-width: max-content;
@@ -498,7 +525,7 @@ nav a:hover,nav a:focus{
     }
 }
 
-/* 9. Results */
+/* 8. Results */
 
 .results a{
     display: block;
@@ -524,6 +551,11 @@ nav a:hover,nav a:focus{
     color: var(--btn-clr);
 }
 
+.captions{
+    width: max-content;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 800px){
     .captions{
         float: right;
@@ -533,7 +565,7 @@ nav a:hover,nav a:focus{
         margin-right: 15%;
     }
 }
-/* 10. Footer */ 
+/* 9. Footer */ 
 footer{
     padding: 1em 1.5em; 
     text-align: center;
