@@ -654,67 +654,56 @@ nav a:focus::before {
 }
 
 /* 9. Educator and Code */
+.educator div,
+.code div {
+  max-width: 50ch;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 .educator img,
 .code img {
   width: 100%;
-  max-width: 70ch;
   height: 20em;
   object-fit: cover;
   margin: 0 auto;
   display: block;
+  order: 1000;
+}
+.educator a,
+.code a {
+  color: var(--clr-primary);
+  font-weight: 700;
 }
 
 .educator img {
-  object-position: 70% 50%;
+  object-position: 80% 50%;
 }
 
 @media screen and (min-width: 800px) {
-  .educator,
-.code {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-    grid-auto-flow: dense;
-    align-items: center;
+  .educator div,
+.code div {
+    max-width: 60ch;
+    margin: 0 auto;
+    display: block;
   }
-
-  .educator h2,
-.code h2 {
-    grid-column: 1/-1;
-  }
-
-  .code div {
-    grid-column: -2/-1;
-  }
-
   .educator p,
 .code p {
-    max-width: 50ch;
-    margin-block: 0;
+    max-width: 60ch;
   }
-
-  .educator p + p,
-.code p + p {
-    margin-top: 1em;
-  }
-
-  .educator div,
-.code img {
-    margin-left: auto;
-    margin-right: 0;
-    padding: 0;
-  }
-
-  .educator img,
-.code div {
-    margin-left: 0;
-    margin-right: auto;
-  }
-
   .educator img,
 .code img {
-    max-width: 50ch;
-    height: 100%;
+    max-width: 50%;
+  }
+
+  .educator img {
+    float: right;
+    margin-left: 1em;
+  }
+
+  .code img {
+    float: left;
+    margin-right: 1em;
   }
 }
 /* 10. Footer */
