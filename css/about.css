@@ -497,10 +497,6 @@ footer a:hover i {
   .about-content {
     padding: 2em 2em 0.5em;
   }
-
-  .about-content p {
-    text-align: center;
-  }
 }
 @media screen and (min-width: 1000px) {
   .about {
