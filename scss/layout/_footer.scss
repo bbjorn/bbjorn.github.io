@@ -1,0 +1,38 @@
+/* 10. Footer */
+footer {
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+footer .txt-underline {
+  --underline-clr: var(--clr-light);
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  max-width: 50ch;
+  margin: 2rem auto;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 0 auto;
+}
+
+footer i {
+  margin: 0 1rem;
+  background-color: var(--clr-light);
+  color: var(--clr-primary-dark);
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: background-color 250ms ease-in-out;
+}
+
+footer a:focus i,
+footer a:hover i {
+  background-color: var(--clr-primary-light);
+}

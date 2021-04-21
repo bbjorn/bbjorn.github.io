@@ -1,0 +1,168 @@
+/* ---------- Index ---------- */
+/*  1. General                 */
+@use 'abstracts/train--colours';
+@use 'base/reset';
+@use 'components/button';
+/*  2. Colours                 */
+@use 'base/colours';
+/*  3. Typography              */
+@use 'base/typography';
+/*  4. Navigation styles       */
+@use 'layout/nav';
+/*  5. Main                    */
+@use 'layout/main';
+/*  6. Intro                   */
+/*  7. Sections                */
+@use 'layout/sections';
+/*  8. Results                 */
+@use 'layout/results';
+/*  9. Footer                  */
+@use 'layout/footer';
+/* --------------------------- */
+
+/* 1. General */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+/* 2. Colours */
+
+/* 3. Typography */
+p {
+  max-width: 60ch;
+}
+
+/* 4. Navigation */
+
+/* 5. Main */
+
+/* 6. Intro */
+
+.intro {
+  padding: 4em 0 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.intro-headers {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../img/trainbuddy/tb-logo-cropped.PNG");
+  background-size: auto 85%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom: var(--clr-light) 2px solid;
+  color: var(--clr-white);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 12em;
+}
+
+.intro-headers::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 33%,
+    var(--clr-primary-dark)
+  );
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 0;
+}
+
+.intro-headers h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+
+.intro-headers img {
+  max-width: 80%;
+}
+
+.intro-content {
+  padding: 1em 2em;
+  background-color: var(--clr-primary-dark);
+}
+
+@media screen and (min-width: 800px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 0;
+    background-color: var(--clr-primary-dark);
+  }
+
+  .intro-headers {
+    border-bottom: none;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 100% auto;
+    border-right: 1px solid white;
+  }
+
+  .intro-headers::before {
+    background-size: 100% auto;
+    background-image: url("../img/trainbuddy/trainbuddy-logo.png");
+    opacity: 1;
+  }
+
+  .intro-headers img {
+    display: none;
+  }
+
+  .intro-headers h2 {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+
+  .intro-headers h3::before {
+    right: 0;
+    left: max(1rem, calc(100% - 30ch));
+  }
+
+  .intro-headers h3 {
+    text-align: right;
+  }
+
+  .intro-content {
+    border-left: 1px solid white;
+  }
+
+  .intro-content div {
+    max-width: max-content;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro {
+    padding-top: 0;
+    margin: 1.5em 1.5em 0;
+  }
+
+  .intro-content {
+    padding-top: 0.5em;
+  }
+}
+
+/* 7. Sections */
+
+/* 8. Results */
+
+@media screen and (min-width: 800px) {
+  .results img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+/* 9. Footer */

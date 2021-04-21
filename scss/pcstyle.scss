@@ -1,0 +1,122 @@
+/* ---------- Index ---------- */
+/*  1. General                 */
+@use 'abstracts/pc--colours';
+@use 'base/reset';
+@use 'components/button';
+/*  2. Colours                 */
+@use 'base/colours';
+/*  3. Typography              */
+@use 'base/typography';
+/*  4. Navigation styles       */
+@use 'layout/nav';
+/*  5. Main                    */
+@use 'layout/main';
+/*  6. Intro                   */
+/*  7. Sections                */
+@use 'layout/sections';
+/*  8. Results                 */
+@use 'layout/results';
+/*  9. Footer                  */
+@use 'layout/footer';
+/* --------------------------- */
+
+/* 1. General */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+.obj-pos-top {
+  object-position: top center;
+}
+
+/* 2. Colours */
+
+/* 3. Typography */
+
+p {
+  max-width: 60ch;
+}
+
+/* 4. Navigation */
+
+/* 5. Main */
+
+/* 6. Intro */
+
+.intro {
+  padding-top: 3rem;
+}
+
+.intro-headers {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(37, 101, 128, 0.2) 0%,
+      rgba(37, 101, 128, 0.8) 100%
+    ),
+    url("../img/privacycoin/pc-conceptart.jpg");
+  background-size: 100% auto;
+  background-position: center center;
+  padding: 4em 2em 2em;
+  border-bottom: var(--clr-light) 2px solid;
+  color: var(--clr-white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-headers h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+
+.intro-content {
+  padding: 1em 2em;
+}
+
+@media screen and (min-width: 800px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 0;
+  }
+
+  .intro-headers {
+    border-bottom: none;
+    background-size: auto 100%;
+  }
+
+  .intro-headers h2 {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+
+  .intro-headers h3::before {
+    right: 0;
+    left: max(1rem, calc(100% - 30ch));
+  }
+
+  .intro-headers h3 {
+    text-align: right;
+  }
+
+  .intro-content div {
+    max-width: max-content;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro {
+    padding-top: 0;
+    margin: 1.5em 1.5em 0;
+  }
+
+  .intro-content {
+    padding-top: 0.5em;
+  }
+}
+
+/* 7. Sections */
+
+/* 8. Results */
+
+/* 9. Footer */

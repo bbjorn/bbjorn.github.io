@@ -1,0 +1,48 @@
+/* 3. Typography */
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 1em auto;
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+.txt-underline {
+  --underline-clr: var(--clr-primary);
+  color: var(--underline-clr);
+  position: relative;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.txt-underline::after {
+  background-color: var(--underline-clr);
+  content: "";
+  position: absolute;
+  bottom: -0.125em;
+  left: -0.25em;
+  right: -0.25em;
+  height: 2px;
+}

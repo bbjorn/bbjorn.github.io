@@ -1,0 +1,64 @@
+/* 9. Educator and Code */
+.educator img,
+.code img {
+  width: 100%;
+  max-width: 70ch;
+  height: 20em;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.educator img {
+  object-position: 70% 50%;
+}
+
+@media screen and (min-width: 800px) {
+  .educator,
+  .code {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    grid-auto-flow: dense;
+    align-items: center;
+  }
+
+  .educator h2,
+  .code h2 {
+    grid-column: 1/-1;
+  }
+
+  .code div {
+    grid-column: -2/-1;
+  }
+
+  .educator p,
+  .code p {
+    max-width: 50ch;
+    margin-block: 0;
+  }
+
+  .educator p + p,
+  .code p + p {
+    margin-top: 1em;
+  }
+
+  .educator div,
+  .code img {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .educator img,
+  .code div {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .educator img,
+  .code img {
+    max-width: 50ch;
+    height: 100%;
+  }
+}

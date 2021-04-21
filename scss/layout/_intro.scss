@@ -1,0 +1,163 @@
+/* 5. Intro */
+.intro {
+  margin-top: 3em;
+  padding: 0;
+}
+
+.hero {
+  padding: 2em;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  top: 20%;
+  left: 0%;
+
+  background-color: var(--clr-white);
+  background-image: url("../img/mecropped.PNG");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+
+  transform: scaleX(-1);
+  opacity: 0.3;
+  z-index: -999;
+  overflow-x: auto;
+}
+
+.hero h2::after {
+  content: "UX Designer";
+  -webkit-animation: topToBottom 9s infinite 0s;
+  -moz-animation: topToBottom 9s infinite 0s;
+  -o-animation: topToBottom 9s infinite 0s;
+  animation: topToBottom 9s infinite 0s;
+}
+
+@keyframes topToBottom {
+  33% {
+    content: "Educator";
+  }
+
+  67% {
+    content: "Developer";
+  }
+}
+
+@-webkit-keyframes topToBottom {
+  33% {
+    content: "Educator";
+  }
+
+  67% {
+    content: "Developer";
+  }
+}
+
+@-moz-keyframes topToBottom {
+  33% {
+    content: "Educator";
+  }
+
+  67% {
+    content: "Developer";
+  }
+}
+
+@-o-keyframes topToBottom {
+  33% {
+    content: "Educator";
+  }
+
+  67% {
+    content: "Developer";
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .hero::after {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro {
+    background-color: var(--clr-light);
+    padding: 10%;
+  }
+
+  .hero {
+    background-color: var(--clr-white);
+    border: var(--clr-primary-dark) 1.5em solid;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+  }
+
+  .hero::after {
+    z-index: 0;
+    opacity: 1;
+
+    bottom: -1.5em;
+    right: -1.5em;
+    left: 60%;
+    background-color: transparent;
+  }
+
+  .hero h1 {
+    text-align: left;
+    font-size: 4.5rem;
+  }
+
+  .hero h2 {
+    text-align: left;
+  }
+
+  .hero p {
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hero p {
+    max-width: 60ch;
+  }
+
+  .hero::after {
+    shape-outside: polygon(
+      61% 22%,
+      55% 59%,
+      82% 79%,
+      86% 100%,
+      0 100%,
+      0 17%,
+      42% 4%
+    );
+  }
+}
+
+/*
+@media screen and (min-width: 1200px) {
+  .hero p {
+    max-width: 70ch;
+  }
+
+  .hero::after {
+    shape-outside: polygon(
+      48% 17%,
+      51% 59%,
+      67% 80%,
+      73% 100%,
+      0 100%,
+      0 17%,
+      26% 0
+    );
+  }
+}*/
