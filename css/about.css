@@ -474,6 +474,10 @@ footer a:hover i {
   background-color: var(--clr-primary-light);
 }
 
+body {
+  background-color: var(--clr-light);
+}
+
 /* 5. Main */
 /* 6. About */
 .about {

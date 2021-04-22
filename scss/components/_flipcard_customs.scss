@@ -1,0 +1,30 @@
+@media (hover: hover) {
+  .card-robopop {
+    .card-top {
+      &::after {
+        width: 60%;
+        left: 20%;
+      }
+    }
+  }
+  .card-trainbuddy {
+    --card-clr: var(--clr-black);
+    .card-top {
+      &::before {
+        border-radius: var(--card-radius);
+      }
+    }
+  }
+
+  .card-access {
+    --card-clr: #3f3f3f;
+    .card-title {
+      position: relative;
+      bottom: 0.5em;
+    }
+  }
+
+  /*
+  .card-privacy {
+  }*/
+}

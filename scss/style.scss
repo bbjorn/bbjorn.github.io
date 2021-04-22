@@ -17,6 +17,9 @@
 @use 'layout/common';
 /*  8. UX Cards                */
 @use 'components/card';
+@use 'components/card-customs';
+@use 'components/flipcard';
+@use 'components/flipcard_customs';
 /*  9. Educator and Code       */
 @use 'layout/educode';
 /* 10. Footer                  */
@@ -28,96 +31,6 @@
 /* 8. UX Cards */
 .ux-text {
   margin: 0 1.5em;
-}
-
-.card-robopop .card-top {
-  padding: 3em;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(189, 85, 141, 0.5) 33%,
-      var(--card-bg-clr)
-    ),
-    var(--card-img);
-  position: relative;
-}
-
-.card-robopop .card-top::after {
-  content: "";
-
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.card-trainbuddy {
-  --card-clr: var(--clr-light);
-  --card-bg-clr: #6ca02f;
-  --card-img: url("../img/trainbuddy/tb-logo-cropped.PNG");
-}
-
-.card-trainbuddy .card-top {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    var(--card-img);
-
-  background-size: 85%;
-  position: relative;
-  z-index: 1;
-}
-
-.card-trainbuddy .card-top::before {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 33%,
-    var(--card-bg-clr)
-  );
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  z-index: 0;
-}
-
-.card-trainbuddy img {
-  padding: 1em;
-  z-index: 2;
-  border-radius: 0;
-}
-
-.card-access {
-  --card-clr: var(--clr-light);
-  --card-bg-clr: #eb9561;
-  --card-img: url("../img/access/ac-customerjourney-trans.png");
-}
-
-.card-access .card-top {
-  background-size: 100% auto;
-}
-
-.card-privacy {
-  --card-clr: var(--clr-light);
-  --card-bg-clr: #256580;
-  --card-img: url("../img/privacycoin/pc-conceptart.jpg");
-}
-
-.card-privacy .card-top {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(37, 103, 128, 0.5) 33%,
-      var(--card-bg-clr)
-    ),
-    var(--card-img);
 }
 
 @media screen and (min-width: 800px) {

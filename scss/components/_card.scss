@@ -1,21 +1,28 @@
 .card {
-  --card-clr: var(--clr-light);
+  --card-clr: var(--clr-white);
   --card-bg-clr: #bd558d;
   --card-img: url("../img/robopop/rp-cover-band.jpg");
+  --card-radius: 2em;
   background-color: var(--clr-white);
   margin: 2em auto;
   display: flex;
   flex-direction: column;
-  border-radius: 2em;
-  box-shadow: 2px 2px 2px var(--clr-overlay-darken-30);
+  border-radius: var(--card-radius);
+
   max-width: 18em;
   text-align: center;
+}
+
+.card-content {
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg-clr);
+  box-shadow: 2px 2px 2px var(--clr-overlay-darken-30);
 }
 
 .card p {
   font-weight: medium;
   font-size: 1.125rem;
-  color: white;
+  color: var(--card-clr);
 }
 
 .card-svg {
