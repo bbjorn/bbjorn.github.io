@@ -729,6 +729,7 @@ nav a:focus::before {
     transition: transform 3s;
     width: 100%;
     height: 100%;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     box-shadow: unset;
   }
