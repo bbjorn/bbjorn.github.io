@@ -754,6 +754,7 @@ nav a:focus::before {
   .card-top {
     display: flex;
     flex-direction: column;
+    transform: translateZ(1px);
   }
   .card-top::after {
     all: unset;

@@ -43,6 +43,7 @@
   .card-top {
     display: flex;
     flex-direction: column;
+    transform: translateZ(1px);
 
     &::after {
       all: unset;
