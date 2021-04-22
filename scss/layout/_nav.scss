@@ -38,31 +38,31 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-}
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
+  li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
 
-nav a {
-  color: var(--clr-light);
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppsercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
+  a {
+    color: var(--clr-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppsercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
 
-nav a:hover,
-nav a:focus {
-  color: var(--clr-primary-light);
+  a:hover,
+  a:focus {
+    color: var(--clr-primary-light);
+  }
 }
 
 .nav-toggle {
@@ -149,40 +149,38 @@ nav a:focus {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
+    ul {
+      display: flex;
+    }
 
-  nav ul {
-    display: flex;
-  }
+    li {
+      margin-left: 2em;
+      margin-bottom: 0;
+    }
 
-  nav li {
-    margin-left: 2em;
-    margin-bottom: 0;
-  }
+    a {
+      opacity: 1;
+      position: relative;
+    }
 
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
+    a::before {
+      content: "";
+      height: 5px;
+      background: var(--clr-primary-light);
+      position: absolute;
+      bottom: -0.5em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
 
-  nav a::before {
-    content: "";
-    height: 5px;
-    background: var(--clr-primary-light);
-    position: absolute;
-    bottom: -0.5em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
+    a:hover::before,
+    a:focus::before {
+      transform: scale(1, 1);
+      transition: transform ease-in-out 250ms;
+    }
   }
-
-  nav a:hover::before,
-  nav a:focus::before {
-    transform: scale(1, 1);
-    transition: transform ease-in-out 250ms;
-  }
-
   /* Scrollspy 
   This only works if the nav is underneath the sections we are changing, 
   which would ruin the site from accessability point of view. 
