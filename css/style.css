@@ -668,7 +668,10 @@ nav a:focus::before {
   object-fit: cover;
   margin: 0 auto;
   display: block;
-  order: 1000;
+}
+.educator p:first-of-type,
+.code p:first-of-type {
+  order: -1;
 }
 .educator a,
 .code a {
@@ -684,26 +687,10 @@ nav a:focus::before {
   .educator div,
 .code div {
     max-width: 60ch;
-    margin: 0 auto;
-    display: block;
   }
   .educator p,
 .code p {
     max-width: 60ch;
-  }
-  .educator img,
-.code img {
-    max-width: 50%;
-  }
-
-  .educator img {
-    float: right;
-    margin-left: 1em;
-  }
-
-  .code img {
-    float: left;
-    margin-right: 1em;
   }
 }
 /* 10. Footer */

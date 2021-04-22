@@ -14,7 +14,10 @@
     object-fit: cover;
     margin: 0 auto;
     display: block;
-    order: 1000;
+  }
+
+  p:first-of-type {
+    order: -1;
   }
 
   a {
@@ -79,27 +82,27 @@
   .code {
     div {
       max-width: 60ch;
-      margin: 0 auto;
-      display: block;
+      //margin: 0 auto;
+      // display: block;
     }
 
     p {
       max-width: 60ch;
     }
 
-    img {
-      max-width: 50%;
-      // margin-bottom: 0.5em;
-    }
+    // img {
+    //   max-width: 50%;
+    //   margin-bottom: 0.5em;
+    // }
   }
 
-  .educator img {
-    float: right;
-    margin-left: 1em;
-  }
+  // .educator img {
+  //   float: right;
+  //   margin-left: 1em;
+  // }
 
-  .code img {
-    float: left;
-    margin-right: 1em;
-  }
+  // .code img {
+  //   float: left;
+  //   margin-right: 1em;
+  // }
 }
