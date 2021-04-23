@@ -561,11 +561,13 @@ nav a:focus::before {
 /* 7. Common for the sections */
 .ux {
   padding: 2em 0.5em 4em;
+  min-height: 100vh;
 }
 
 .educator,
 .code {
   padding: 2em 2em 6em;
+  min-height: 100vh;
 }
 
 .ux img,
@@ -614,8 +616,8 @@ nav a:focus::before {
   background-repeat: no-repeat;
   color: var(--card-clr);
   min-height: 16em;
-  border-top-left-radius: 2em;
-  border-top-right-radius: 2em;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -631,8 +633,8 @@ nav a:focus::before {
 .card-bottom {
   background-color: var(--card-bg-clr);
   color: var(--card-clr);
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
   padding: 0em 1.5em 4em;
   height: 100%;
   position: relative;
@@ -664,29 +666,15 @@ nav a:focus::before {
 
 .card-trainbuddy .card-top {
   background-color: var(--clr-white);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--card-img);
-  background-size: 85%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 33%, var(--card-bg-clr)), linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--card-img);
+  background-size: 100%, 100%, 85%;
   position: relative;
   z-index: 1;
-}
-
-.card-trainbuddy .card-top::before {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 33%, var(--card-bg-clr));
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
 }
 
 .card-trainbuddy img {
   padding: 1em;
   z-index: 2;
-  border-radius: 0;
 }
 
 .card-access {
@@ -717,7 +705,7 @@ nav a:focus::before {
 
 @media (hover: hover) {
   .card {
-    --card-radius: 1em;
+    --card-radius: 0.5rem;
     width: 18em;
     height: 26em;
     background: transparent;
@@ -917,7 +905,7 @@ footer a:hover i {
 @media screen and (min-width: 800px) {
   .ux {
     display: grid;
-    grid-template-columns: 3fr auto 1fr auto 3fr;
+    grid-template-columns: 1fr auto 2em auto 1fr;
   }
 
   .ux-text {
@@ -934,6 +922,28 @@ footer a:hover i {
 
   .card:nth-child(odd) {
     grid-column: 4/5;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .ux {
+    display: grid;
+    grid-template-columns: 1fr auto 2em auto 2em auto 2em auto 1fr;
+  }
+
+  .card:nth-child(2) {
+    grid-column: 2/3;
+  }
+
+  .card:nth-child(3) {
+    grid-column: 4/5;
+  }
+
+  .card:nth-child(4) {
+    grid-column: 6/7;
+  }
+
+  .card:nth-child(5) {
+    grid-column: 8/9;
   }
 }
 

@@ -46,8 +46,8 @@
   color: var(--card-clr);
 
   min-height: 16em;
-  border-top-left-radius: 2em;
-  border-top-right-radius: 2em;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
 
   display: flex;
   justify-content: center;
@@ -64,8 +64,8 @@
 .card-bottom {
   background-color: var(--card-bg-clr);
   color: var(--card-clr);
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
   padding: 0em 1.5em 4em;
   height: 100%;
   position: relative;

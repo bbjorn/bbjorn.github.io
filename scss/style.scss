@@ -36,7 +36,7 @@
 @media screen and (min-width: 800px) {
   .ux {
     display: grid;
-    grid-template-columns: 3fr auto 1fr auto 3fr;
+    grid-template-columns: 1fr auto 2em auto 1fr;
   }
 
   .ux-text {
@@ -53,5 +53,28 @@
 
   .card:nth-child(odd) {
     grid-column: 4/5;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .ux {
+    display: grid;
+    grid-template-columns: 1fr auto 2em auto 2em auto 2em auto 1fr;
+  }
+
+  .card:nth-child(2) {
+    grid-column: 2/3;
+  }
+
+  .card:nth-child(3) {
+    grid-column: 4/5;
+  }
+
+  .card:nth-child(4) {
+    grid-column: 6/7;
+  }
+
+  .card:nth-child(5) {
+    grid-column: 8/9;
   }
 }
