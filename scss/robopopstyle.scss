@@ -78,11 +78,16 @@ p {
   padding: 1em 2em;
 }
 
+.intro-content ol {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 800px) {
   .intro {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding-top: 0;
+    padding-top: 3em;
   }
 
   .intro-headers {

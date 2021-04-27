@@ -532,6 +532,11 @@ p {
   background-color: var(--clr-primary-dark);
 }
 
+.intro-content ol {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 800px) {
   .intro {
     display: grid;
