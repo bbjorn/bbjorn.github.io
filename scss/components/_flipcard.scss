@@ -4,7 +4,7 @@
   --level-three: translateZ(6rem);
 }
 
-@media (hover: hover) {
+@media (hover) {
   .card {
     --card-radius: 0.5rem;
     width: 18em;
