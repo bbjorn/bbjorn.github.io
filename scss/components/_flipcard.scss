@@ -21,8 +21,8 @@
     transform-style: preserve-3d;
     box-shadow: unset;
   }
-
-  .card:hover .card-content {
+  .card:hover .card-content,
+  .card:focus-within .card-content {
     transform: rotateY(0.5turn);
   }
 
