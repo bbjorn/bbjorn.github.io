@@ -926,15 +926,43 @@ footer i {
   margin: 0 1rem;
   background-color: var(--clr-light);
   color: var(--clr-primary-dark);
-  padding: 1rem;
+  padding: 0.33em;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: background-color 250ms ease-in-out;
 }
 
 footer a:focus i,
 footer a:hover i {
   background-color: var(--clr-primary-light);
+}
+
+.container-contact1 {
+  margin: 1em auto;
+  padding: 0;
+  max-width: 60ch;
+}
+
+.wrap-input1 + .wrap-input1 {
+  margin-top: 1em;
+}
+
+.input1 {
+  padding: 0.5em 1em;
+  width: 100%;
+  font-family: "Roboto", "Work Sans", sans-serif;
+}
+
+textarea.input1 {
+  resize: vertical;
+  height: 5em;
+}
+
+.contact1-form-btn {
+  --btn-clr: var(--clr-light);
+  background: var(--clr-primary);
+  width: max-content;
+  margin: 1em auto;
 }
 
 /*# sourceMappingURL=style.css.map */

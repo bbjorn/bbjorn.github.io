@@ -490,9 +490,9 @@ footer i {
   margin: 0 1rem;
   background-color: var(--clr-light);
   color: var(--clr-primary-dark);
-  padding: 1rem;
+  padding: 0.33em;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: background-color 250ms ease-in-out;
 }
 
