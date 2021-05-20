@@ -968,10 +968,11 @@ textarea.input1 {
 
 .contact1-form-btn {
   font-size: 1rem;
+  text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
   width: max-content;
-  margin: 1em auto;
+  margin: 1.25em auto 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
