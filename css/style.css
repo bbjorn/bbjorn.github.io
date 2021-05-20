@@ -591,7 +591,7 @@ nav a:focus::before {
 
 .card {
   --card-clr: var(--clr-white);
-  --card-bg-clr: #bd558d;
+  --card-bg-clr: #b15084;
   --card-img: url("../img/robopop/rp-cover-band.jpg");
   --card-radius: 2em;
   margin: 0 auto;
@@ -782,8 +782,10 @@ nav a:focus::before {
     transform: rotateY(0.5turn) translateZ(1px);
     background: var(--clr-white);
     --card-clr: var(--card-bg-clr);
+    --card-clr-dark: var(--card-clr);
   }
   .card-bottom p {
+    color: var(--card-clr-dark);
     transform: var(--level-two);
     width: 100%;
     font-size: 1rem;
@@ -818,6 +820,9 @@ nav a:focus::before {
   .card-trainbuddy .card-top::before {
     border-radius: var(--card-radius);
   }
+  .card-trainbuddy .card-bottom {
+    --card-clr-dark: hsl(88, 55%, 30%);
+  }
 
   .card-access {
     --card-clr: #3f3f3f;
@@ -825,6 +830,9 @@ nav a:focus::before {
   .card-access .card-title {
     position: relative;
     bottom: 0.5em;
+  }
+  .card-access .card-bottom {
+    --card-clr-dark: hsl(23, 78%, 40%);
   }
 
   /*

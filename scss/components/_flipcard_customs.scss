@@ -9,10 +9,14 @@
   }
   .card-trainbuddy {
     --card-clr: var(--clr-black);
+
     .card-top {
       &::before {
         border-radius: var(--card-radius);
       }
+    }
+    .card-bottom {
+      --card-clr-dark: hsl(88, 55%, 30%);
     }
   }
 
@@ -21,6 +25,10 @@
     .card-title {
       position: relative;
       bottom: 0.5em;
+    }
+
+    .card-bottom {
+      --card-clr-dark: hsl(23, 78%, 40%);
     }
   }
 

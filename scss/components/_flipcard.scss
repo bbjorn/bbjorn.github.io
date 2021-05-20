@@ -71,8 +71,10 @@
     transform: rotateY(0.5turn) translateZ(1px);
     background: var(--clr-white);
     --card-clr: var(--card-bg-clr);
+    --card-clr-dark: var(--card-clr);
 
     p {
+      color: var(--card-clr-dark);
       transform: var(--level-two);
       width: 100%;
       font-size: 1rem;
