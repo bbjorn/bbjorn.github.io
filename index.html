@@ -313,55 +313,61 @@
             <p class="contact1-form-title">
               Want to have a chat over a cup of tea? Send me a message!
             </p>
-
             <div
-              class="wrap-input1 validate-input"
+              class="wrap-input1 validate-input input1-short"
               data-validate="Name is required"
             >
               <input
+                id="input1Name"
                 class="input1"
                 type="text"
                 name="name"
-                placeholder="Name"
+                required
               />
+              <label for="input1Name">Your Name</label>
               <span class="shadow-input1"></span>
             </div>
-
             <div
-              class="wrap-input1 validate-input"
+              class="wrap-input1 validate-input input1-short"
               data-validate="Valid email is required: ex@abc.xyz"
             >
               <input
+                id="input1Email"
                 class="input1"
                 type="text"
                 name="email"
-                placeholder="Email"
+                required
               />
+              <label for="input1Email">Your Email</label>
               <span class="shadow-input1"></span>
             </div>
-
             <div
               class="wrap-input1 validate-input"
               data-validate="Subject is required"
             >
               <input
+                id="input1Subject"
                 class="input1"
                 type="text"
                 name="subject"
-                placeholder="Subject"
+                required
               />
+              <label for="input1Subject">Subject of Your Message</label>
               <span class="shadow-input1"></span>
             </div>
-
             <div
-              class="wrap-input1 validate-input"
+              class="wrap-input1 validate-input wrap-message"
               data-validate="Message is required"
             >
               <textarea
+                id="input1Message"
                 class="input1"
                 name="message"
-                placeholder="Message"
+                required
               ></textarea>
+              <label for="input1Message" class="input1-message-text"
+                >Message</label
+              >
               <span class="shadow-input1"></span>
             </div>
 
