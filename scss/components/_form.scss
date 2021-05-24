@@ -1,5 +1,5 @@
 .container-contact1 {
-  margin: 1em auto;
+  margin: 1em auto 3em;
   padding: 0;
   max-width: 60ch;
 }
@@ -8,19 +8,16 @@
   width: 100%;
   font-family: "Roboto", "Work Sans", sans-serif;
   background: transparent;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1;
-  padding: 0.5em 1em;
+
   outline: 0;
   border: 2px solid var(--clr-white);
   &:valid {
     // Hides the label
     background: white;
-
-    & + label {
-      color: white;
-    }
   }
   &:focus {
     border-color: var(--clr-primary);
@@ -37,7 +34,7 @@
     margin-top: -16px;
   }
 
-  padding: 12px 12px 12px 12px;
+  padding: 0.75em;
 }
 
 textarea.input1 {
@@ -63,12 +60,13 @@ textarea.input1 {
     background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   position: absolute;
   color: #0005;
+  text-align: left;
   z-index: 0;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.75em;
 }
 
 .wrap-input1 {
