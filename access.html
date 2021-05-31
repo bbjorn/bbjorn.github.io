@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/accessstyle.css" />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -155,7 +155,79 @@
     <!-- footer -->
     <footer id="contact" class="bg-prim-dark">
       <h2 class="txt-underline">Get In Touch</h2>
-      <p>Want to have a chat over a cup of tea? Send me a message!</p>
+      <!-- Contact Form -->
+      <div class="contact1">
+        <div class="container-contact1">
+          <form class="contact1-form validate-form">
+            <p class="contact1-form-title">
+              Want to have a chat over a cup of tea? Send me a message!
+            </p>
+            <div
+              class="wrap-input1 validate-input input1-short"
+              data-validate="Name is required"
+            >
+              <input
+                id="input1Name"
+                class="input1"
+                type="text"
+                name="name"
+                required
+              />
+              <label for="input1Name">Your Name</label>
+              <span class="shadow-input1"></span>
+            </div>
+            <div
+              class="wrap-input1 validate-input input1-short"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                id="input1Email"
+                class="input1"
+                type="text"
+                name="email"
+                required
+              />
+              <label for="input1Email">Your Email</label>
+              <span class="shadow-input1"></span>
+            </div>
+            <div
+              class="wrap-input1 validate-input"
+              data-validate="Subject is required"
+            >
+              <input
+                id="input1Subject"
+                class="input1"
+                type="text"
+                name="subject"
+                required
+              />
+              <label for="input1Subject">Subject of Your Message</label>
+              <span class="shadow-input1"></span>
+            </div>
+            <div
+              class="wrap-input1 validate-input wrap-message"
+              data-validate="Message is required"
+            >
+              <textarea
+                id="input1Message"
+                class="input1"
+                name="message"
+                required
+              ></textarea>
+              <label for="input1Message" class="input1-message-text"
+                >Message</label
+              >
+              <span class="shadow-input1"></span>
+            </div>
+
+            <div class="container-contact1-form-btn">
+              <button class="btn contact1-form-btn">Send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Icons -->
+      <p>Or check me out on one of the following sites:</p>
       <ul>
         <li>
           <a
@@ -168,16 +240,33 @@
           </a>
         </li>
         <li>
-          <a aria-label="Email" href="mailto:bjrn.bergqvist@gmail.com">
-            <i class="far fa-envelope"></i>
+          <a
+            aria-label="Figma"
+            href="https://www.figma.com/team_invite/redeem/XzWJ0rvNEHx0YH6e6fFCqH"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-figma"></i>
           </a>
         </li>
         <li>
-          <a aria-label="Phone Number" href="tel:+46733809927">
-            <i class="fas fa-phone"></i>
+          <a
+            aria-label="Github"
+            href="https://github.com/bbjorn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-github-alt"></i>
           </a>
         </li>
       </ul>
     </footer>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -484,23 +484,115 @@ footer ul {
 footer a {
   text-decoration: none;
   padding: 0 auto;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-light);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
 }
 
 footer i {
-  margin: 0 1rem;
-  background-color: var(--clr-light);
+  margin: 0;
   color: var(--clr-primary-dark);
-  padding: 0.33em;
-  border-radius: 50%;
-  font-size: 2rem;
-  transition: background-color 250ms ease-in-out;
 }
 
-footer a:focus i,
-footer a:hover i {
+footer a:focus,
+footer a:hover {
   background-color: var(--clr-primary-light);
+  transform: scale(1.2);
 }
 
+.container-contact1 {
+  margin: 1em auto 3em;
+  padding: 0;
+  max-width: 60ch;
+}
+
+.input1 {
+  width: 100%;
+  font-family: "Roboto", "Work Sans", sans-serif;
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  outline: 0;
+  border: 2px solid var(--clr-white);
+  padding: 0.75em;
+}
+.input1:valid {
+  background: white;
+}
+.input1:focus {
+  border-color: var(--clr-primary);
+  padding: 4px 6px 20px 6px;
+}
+.input1:focus + label {
+  background: var(--clr-primary);
+  color: white;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+  top: 100%;
+  margin-top: -16px;
+}
+
+textarea.input1 {
+  display: block;
+  resize: vertical;
+  height: 8em;
+}
+
+.contact1-form-btn {
+  font-size: 1rem;
+  text-transform: capitalize;
+  --btn-clr: var(--clr-light);
+  background: var(--clr-primary);
+  width: max-content;
+  margin: 1.25em auto 1em;
+}
+
+.contact1-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: #0005;
+  text-align: left;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.75em;
+}
+
+.wrap-input1 {
+  margin: 1em 0;
+  position: relative;
+  background: white;
+}
+
+@media screen and (min-width: 800px) {
+  .contact1-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 1em;
+  }
+  .contact1-form * {
+    grid-column: 1/-1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .contact1-form .input1-short {
+    grid-column: span 1;
+  }
+}
 /* 2. Colours */
 /* 3. Typography */
 p {
