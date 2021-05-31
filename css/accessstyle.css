@@ -651,7 +651,7 @@ p {
 
   .intro-headers {
     border-bottom: none;
-    background-image: linear-gradient(to bottom, var(--clr-primary-dark), rgba(255, 255, 255, 0) 40% 60%, var(--clr-primary-dark)), url("../img/access/ac-customerjourney-trans.png");
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 35%, var(--clr-primary-dark) 90%), url("../img/access/ac-customerjourney-trans.png");
     background-size: 100% auto;
     border-right: 1px solid white;
   }
