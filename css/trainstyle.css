@@ -16,9 +16,9 @@
   --clr-dark: #262626;
   --clr-light: #eee;
   --clr-white: white;
-  --clr-primary-dark: #6ca02f;
-  --clr-primary: #85bf44;
-  --clr-primary-light: #daecc0;
+  --clr-primary-dark: hsl(88, 100%, 24%);
+  --clr-primary: hsl(88, 73%, 39%);
+  --clr-primary-light: hsl(87, 55%, 72%);
   --clr-overlay-brighten: rgba(255, 255, 255, 0.2);
   --clr-overlay-darken: rgba(0, 0, 0, 0.15);
   --clr-overlay-darken-30: rgba(0, 0, 0, 0.3);

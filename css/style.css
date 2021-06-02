@@ -672,7 +672,7 @@ nav a:focus::before {
 
 .card-trainbuddy {
   --card-clr: var(--clr-light);
-  --card-bg-clr: #6ca02f;
+  --card-bg-clr: hsl(88, 73%, 39%);
   --card-img: url("../img/trainbuddy/tb-logo-cropped.PNG");
 }
 
@@ -691,7 +691,7 @@ nav a:focus::before {
 
 .card-access {
   --card-clr: var(--clr-white);
-  --card-bg-clr: #eb9561;
+  --card-bg-clr: #da7637;
   --card-img: url("../img/access/ac-customerjourney-trans.png");
 }
 .card-access .card-top {
@@ -821,7 +821,7 @@ nav a:focus::before {
     border-radius: var(--card-radius);
   }
   .card-trainbuddy .card-bottom {
-    --card-clr-dark: hsl(88, 55%, 30%);
+    --card-clr-dark: hsl(88, 100%, 24%);
   }
 
   .card-access {
@@ -832,7 +832,7 @@ nav a:focus::before {
     bottom: 0.5em;
   }
   .card-access .card-bottom {
-    --card-clr-dark: hsl(23, 78%, 40%);
+    --card-clr-dark: #b64b09;
   }
 
   /*
