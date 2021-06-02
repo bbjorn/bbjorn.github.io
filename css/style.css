@@ -925,7 +925,7 @@ footer ul {
   margin: 2rem auto;
 }
 
-footer a {
+.icon-link {
   text-decoration: none;
   padding: 0 auto;
   display: grid;
@@ -938,15 +938,24 @@ footer a {
   transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
 }
 
-footer i {
+.icon-link i {
   margin: 0;
   color: var(--clr-primary-dark);
 }
 
-footer a:focus,
-footer a:hover {
+.icon-link:focus,
+.icon-link:hover {
   background-color: var(--clr-primary-light);
   transform: scale(1.2);
+}
+
+.footer-btn {
+  font-size: 1rem;
+  text-transform: capitalize;
+  --btn-clr: var(--clr-light);
+  background: var(--clr-primary);
+  width: 16em;
+  margin: 1.25em auto 1em;
 }
 
 .container-contact1 {
@@ -996,7 +1005,7 @@ textarea.input1 {
   text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
-  width: max-content;
+  width: 16em;
   margin: 1.25em auto 1em;
 }
 
