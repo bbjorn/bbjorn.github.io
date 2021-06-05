@@ -1,0 +1,56 @@
+.sec {
+  padding: 2em 2em;
+}
+
+.captions p {
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.container img {
+  border-radius: 0.5em;
+  width: 100%;
+  height: 16em;
+  object-fit: cover;
+}
+
+/* removing the space means the img and .tall are both part of the same selector */
+img.tall {
+  width: auto;
+  max-width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .sec {
+    padding: 3em 2em;
+  }
+  .sec h2 {
+    margin-bottom: 1.5em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+    gap: 2em;
+  }
+
+  .container .left {
+    grid-column: 1/2;
+  }
+
+  .container .right {
+    grid-column: 2/3;
+  }
+
+  .textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

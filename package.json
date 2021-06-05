@@ -1,0 +1,23 @@
+{
+  "name": "bbjorn.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbjorn/bbjorn.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbjorn/bbjorn.github.io/issues"
+  },
+  "homepage": "https://github.com/bbjorn/bbjorn.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

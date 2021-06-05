@@ -1,0 +1,83 @@
+.card {
+  --card-clr: var(--clr-white);
+  --card-bg-clr: #b15084;
+  --card-img: url("../img/robopop/rp-cover-band.jpg");
+  --card-radius: 2em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--card-radius);
+
+  max-width: 18em;
+  text-align: center;
+}
+
+.card-content {
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg-clr);
+  box-shadow: 2px 2px 2px var(--clr-overlay-darken-30);
+  flex: 1;
+  position: relative;
+}
+
+.card p {
+  font-weight: medium;
+  font-size: 1.125rem;
+  color: var(--card-clr);
+}
+
+.card-svg {
+  stroke: var(--card-clr);
+  stroke-width: 0.25mm;
+  fill: var(--card-clr);
+  z-index: 10;
+}
+
+.card-top {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 33%,
+      var(--card-bg-clr)
+    ),
+    var(--card-img);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--card-clr);
+
+  min-height: 16em;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.card-top h3 {
+  font-size: 2.5rem;
+  height: max-content;
+  text-transform: capitalize;
+}
+
+.card-bottom {
+  background-color: var(--card-bg-clr);
+  color: var(--card-clr);
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+  padding: 0em 1.5em 4em;
+}
+.card-bottom p {
+  font-weight: 500;
+}
+
+.card-bottom .btn {
+  --btn-clr: var(--card-clr);
+
+  position: absolute;
+  bottom: 1.5em;
+  left: 15%;
+  right: 15%;
+}

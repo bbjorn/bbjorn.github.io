@@ -1,0 +1,38 @@
+@media (hover: hover) {
+  .card-robopop {
+    .card-top {
+      &::after {
+        width: 60%;
+        left: 20%;
+      }
+    }
+  }
+  .card-trainbuddy {
+    --card-clr: var(--clr-black);
+
+    .card-top {
+      &::before {
+        border-radius: var(--card-radius);
+      }
+    }
+    .card-bottom {
+      --card-clr-dark: hsl(88, 100%, 24%);
+    }
+  }
+
+  .card-access {
+    --card-clr: #3f3f3f;
+    .card-title {
+      position: relative;
+      bottom: 0.5em;
+    }
+
+    .card-bottom {
+      --card-clr-dark: #b64b09;
+    }
+  }
+
+  /*
+  .card-privacy {
+  }*/
+}

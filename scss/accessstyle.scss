@@ -1,0 +1,150 @@
+/* ---------- Index ---------- */
+/*  1. General                 */
+@use 'abstracts/access--colours';
+@use 'base/reset';
+@use 'components/button';
+/*  2. Colours                 */
+@use 'base/colours';
+/*  3. Typography              */
+@use 'base/typography';
+/*  4. Navigation styles       */
+@use 'layout/nav';
+/*  5. Main                    */
+@use 'layout/main';
+/*  6. Intro                   */
+/*  7. Sections                */
+@use 'layout/sections';
+/*  8. Results                 */
+@use 'layout/results';
+/*  9. Footer                  */
+@use 'layout/footer';
+@use 'components/form';
+/* --------------------------- */
+
+/* 1. General */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+/* 2. Colours */
+
+/* 3. Typography */
+p {
+  max-width: 60ch;
+}
+
+/* 4. Navigation */
+
+/* 5. Main */
+
+/* 6. Intro */
+
+.intro {
+  padding: 4em 0 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.intro-headers {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 33%,
+      var(--clr-primary-dark)
+    ),
+    url("../img/access/ac-customerjourney-trans.png");
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom: var(--clr-light) 2px solid;
+  color: var(--clr-white);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 12em;
+}
+
+.intro-headers h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+
+.intro-headers img {
+  max-width: 80%;
+}
+
+.intro-content {
+  padding: 1em 2em;
+  background-color: var(--clr-primary-dark);
+}
+
+.intro-content ol {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 800px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 3em;
+  }
+
+  .intro-headers {
+    border-bottom: none;
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0) 35%,
+        var(--clr-primary-dark) 90%
+      ),
+      url("../img/access/ac-customerjourney-trans.png");
+    background-size: 100% auto;
+    border-right: 1px solid white;
+  }
+
+  .intro-headers h2 {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+
+  .intro-headers h3::before {
+    right: 0;
+    left: max(1rem, calc(100% - 30ch));
+  }
+
+  .intro-headers h3 {
+    text-align: right;
+  }
+
+  .intro-content {
+    border-left: 1px solid white;
+  }
+
+  .intro-content div {
+    max-width: max-content;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro {
+    padding-top: 0;
+    margin: 1.5em 1.5em 0;
+  }
+
+  .intro-content {
+    padding-top: 0.5em;
+  }
+}
+
+/* 7. Sections */
+
+.container img {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* 8. Results */
+
+.results img {
+  border-radius: 0;
+}
+
+/* 9. Footer */

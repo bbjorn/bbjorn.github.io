@@ -1,0 +1,191 @@
+/* 4. Navigation */
+:root {
+  scroll-padding-top: 3em;
+  scroll-behavior: smooth;
+}
+
+.main-header {
+  background: var(--clr-primary-dark);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 0 -4px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.main-header a {
+  text-decoration: none;
+}
+
+.main-header h3 {
+  color: var(--clr-light);
+  margin: 0.6em;
+}
+
+.main-header h3:focus,
+.main-header h3:hover {
+  color: var(--clr-primary-light);
+}
+
+nav {
+  background: var(--clr-primary-dark);
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-align: left;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  a {
+    color: var(--clr-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppsercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--clr-primary-light);
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--clr-light);
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  position: relative;
+
+  transition-property: transform opacity background-color;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1s;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  background: transparent;
+  transform: rotate(180deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / span 1;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    ul {
+      display: flex;
+    }
+
+    li {
+      margin-left: 2em;
+      margin-bottom: 0;
+    }
+
+    a {
+      opacity: 1;
+      position: relative;
+    }
+
+    a::before {
+      content: "";
+      height: 5px;
+      background: var(--clr-primary-light);
+      position: absolute;
+      bottom: -0.5em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
+
+    a:hover::before,
+    a:focus::before {
+      transform: scale(1, 1);
+      transition: transform ease-in-out 250ms;
+    }
+  }
+  /* Scrollspy 
+  This only works if the nav is underneath the sections we are changing, 
+  which would ruin the site from accessability point of view. 
+  
+  section#about:hover ~ nav a[href="#about"] {
+    background-color: red;
+  }*/
+}

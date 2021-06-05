@@ -1,0 +1,28 @@
+/* 8. UX Cards */
+.ux-text {
+  margin: 2em auto;
+}
+
+.ux-grid {
+  margin: 0 auto;
+  display: grid;
+  gap: 3em;
+}
+
+@media screen and (min-width: 800px) {
+  .ux-text {
+    max-width: 65ch;
+  }
+
+  .ux-grid {
+    grid-template-columns: 18em 18em;
+    width: calc(calc(18 * 2em) + 3em);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .ux-grid {
+    grid-template-columns: 18em 18em 18em 18em;
+    width: calc(calc(18 * 4em) + calc(3 * 3em));
+  }
+}

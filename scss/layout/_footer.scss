@@ -1,0 +1,51 @@
+/* 10. Footer */
+footer {
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+footer .txt-underline {
+  --underline-clr: var(--clr-light);
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  max-width: 50ch;
+  margin: 2rem auto;
+}
+
+.icon-link {
+  text-decoration: none;
+  padding: 0 auto;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-light);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.icon-link i {
+  margin: 0;
+  color: var(--clr-primary-dark);
+}
+
+.icon-link:focus,
+.icon-link:hover {
+  background-color: var(--clr-primary-light);
+  transform: scale(1.2);
+}
+
+.footer-btn {
+  font-size: 1rem;
+  text-transform: capitalize;
+  --btn-clr: var(--clr-light);
+  background: var(--clr-primary);
+  width: 16em;
+  margin: 1.25em auto 1em;
+}

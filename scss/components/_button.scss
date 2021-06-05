@@ -1,0 +1,29 @@
+.btn {
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+  border: 0;
+  line-height: 1;
+  background: none;
+
+  text-align: center;
+  font-weight: 600;
+  box-sizing: border-box;
+
+  --btn-clr: rgb(--clr-light);
+  --btn-outline: 2px solid var(--btn-clr);
+  color: var(--btn-clr);
+  outline: var(--btn-outline);
+  border: var(--btn-outline);
+  outline-offset: -2px;
+  transition: outline-width 200ms ease, outline-offset 200ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: var(--btn-outline);
+  outline-width: 8px;
+  outline-offset: -8px;
+}

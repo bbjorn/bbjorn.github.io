@@ -1,0 +1,100 @@
+:root {
+  --level-one: translateZ(2rem);
+  --level-two: translateZ(4rem);
+  --level-three: translateZ(6rem);
+}
+
+@media (hover) {
+  .card {
+    --card-radius: 0.5rem;
+    width: 18em;
+    height: 26em;
+    background: transparent;
+    perspective: 800px;
+  }
+
+  .card-content {
+    position: relative;
+    transition: transform 3s;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    box-shadow: unset;
+  }
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: rotateY(0.5turn);
+  }
+
+  .card-top,
+  .card-bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: var(--card-radius);
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  .card-top {
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(1px);
+
+    &::after {
+      all: unset;
+      position: absolute;
+      content: "";
+      bottom: 11em;
+      left: 15%;
+      height: 5px;
+      width: 70%;
+      background: var(--card-clr);
+      transform: var(--level-two);
+    }
+  }
+  .card-title {
+    position: relative;
+    transform: var(--level-three);
+    overflow: visible;
+
+    /* The svg became too big without this */
+    width: 100%;
+  }
+
+  .card-bottom {
+    padding: 2.5em;
+    transform: rotateY(0.5turn) translateZ(1px);
+    background: var(--clr-white);
+    --card-clr: var(--card-bg-clr);
+    --card-clr-dark: var(--card-clr);
+
+    p {
+      color: var(--card-clr-dark);
+      transform: var(--level-two);
+      width: 100%;
+      font-size: 1rem;
+    }
+    .btn {
+      transform: var(--level-two);
+      font-size: 1rem;
+      margin-bottom: 1.75em;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      --spacer: 1.5rem;
+      top: var(--spacer);
+      bottom: var(--spacer);
+      left: var(--spacer);
+      right: var(--spacer);
+      border: 2px solid currentColor;
+      border-radius: var(--card-radius);
+      transform: var(--level-one);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.bg-prim-dark {
+  background: var(--clr-primary-dark);
+  color: var(--clr-light);
+}
+
+.bg-light {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+.bg-white {
+  background: var(--clr-white);
+  color: var(--clr-dark);
+}
+
+.clr-primary {
+  color: var(--clr-primary);
+}
