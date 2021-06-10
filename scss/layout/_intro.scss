@@ -1,6 +1,6 @@
 /* 5. Intro */
 .intro {
-  margin-top: 3em;
+  margin-top: 4rem;
   padding: 0;
 }
 
@@ -30,17 +30,25 @@
     margin: 1rem;
   }
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     display: block;
-    background-color: var(--clr-light);
-    width: 200vw;
-    height: 10em;
-    top: 0;
-    left: -75%;
-    transform: rotate(-45deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: -5em;
+    left: 0;
     z-index: -1;
+  }
+  &::before {
+    border-width: 20em 20em 0 0;
+    border-color: var(--clr-light) transparent transparent transparent;
+  }
+  &::after {
+    border-width: 5em 5em 0 0;
+    border-color: var(--clr-white) transparent transparent transparent;
   }
 }
 
@@ -73,15 +81,112 @@
 }
 
 .hero__tile {
-  background-color: var(--clr-white);
+  position: relative;
+
   width: 100%;
   aspect-ratio: 1 / 1;
+  transform-style: preserve-3d;
+  perspective: 800px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    pointer-events: none;
+  }
+
+  &::before {
+    transform: translateZ(-1px) rotate3d(0, 1, 0, -180deg);
+  }
+
+  &::after {
+    background-color: var(--clr-white);
+  }
+
+  &3,
+  &5,
+  &6,
+  &7,
+  &8,
+  &9 {
+    --animation-speed: 3000ms;
+    --animation-delay: 0;
+    --tile-pic: url(../../img/RubberDuckTeacher.jpg);
+    &::before {
+      animation: flipTileBack var(--animation-speed) ease-in-out;
+      animation-delay: var(--animation-delay);
+      background-image: var(--tile-pic);
+      background-size: cover;
+      background-position: center;
+      box-shadow: inset 0 0 2em 0 var(--clr-overlay-darken-30);
+    }
+    &::after {
+      animation: flipTileFront var(--animation-speed) ease-in-out;
+      animation-delay: var(--animation-delay);
+    }
+  }
+
+  &5 {
+    --animation-delay: 0.5s;
+    --tile-pic: url(../../img/privacycoin/pc-conceptart.jpg);
+  }
+
+  &6 {
+    --animation-delay: 0.25s;
+    --tile-pic: url(../../img/trainbuddy/tb-trainstation.png);
+  }
+
+  &7 {
+    --animation-delay: 1s;
+    --tile-pic: url(../../img/access/ac-customerjourney.png);
+    &::before {
+      background-color: white;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &8 {
+    --animation-delay: 0.75s;
+    --tile-pic: url(../../img/robopop/rp-universeum.png);
+  }
+
+  &9 {
+    --animation-delay: 0.5s;
+    --tile-pic: url(../../img/3dmountainscropped.png);
+  }
+}
+
+@keyframes flipTileBack {
+  0% {
+    transform: translateZ(-1px) rotate3d(0, 1, 0, -180deg);
+  }
+  33%,
+  67% {
+    transform: translateZ(-1px) rotate3d(0, 1, 0, 0deg);
+  }
+  100% {
+    transform: translateZ(-1px) rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+@keyframes flipTileFront {
+  33%,
+  67% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
 }
 
 @media screen and (min-width: 800px) {
   .hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     padding-bottom: 0;
   }
 
@@ -89,13 +194,15 @@
     margin: 0;
     position: relative;
     justify-items: flex-start;
+    width: 50%;
 
     h1,
     h3 {
       text-align: left;
     }
-    &::before {
-      left: -180%;
+    &::before,
+    &::after {
+      top: 0em;
     }
   }
 
@@ -104,50 +211,92 @@
   }
 
   .hero__grid {
-    margin-top: auto;
-    position: static;
-    z-index: 0;
+    position: absolute;
+    height: 25em;
+    right: 0;
+    left: unset;
+    bottom: unset;
+    top: 0;
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero__tile {
+    &3,
+    &5,
+    &6,
+    &7,
+    &8,
+    &9 {
+      &::before,
+      &::after {
+        transition: transform 1s ease-in;
+      }
+      &:hover {
+        &::before {
+          transition: transform 1s ease-out;
+          transform: rotate3d(0, 1, 0, 360deg);
+        }
+        &::after {
+          transition: transform 1s ease-out;
+          transform: rotate3d(0, 1, 0, 180deg);
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .intro {
+  body {
     background-color: var(--clr-light);
+  }
+  .intro {
     padding: 10%;
+    z-index: 0;
   }
 
   .hero {
+    position: relative;
     background-color: var(--clr-white);
     border: var(--clr-primary-dark) 1.5em solid;
     box-sizing: border-box;
     max-width: 1000px;
     margin: 0 auto;
-    z-index: 10;
+
+    overflow: visible;
   }
 
   .hero__text {
-    &::before {
-      left: -250%;
+    overflow: hidden;
+    position: relative;
+
+    h1 {
+      max-width: 20em;
+      flex-grow: 0;
     }
   }
 
-  .intro::before,
-  .intro::after {
+  .hero::before,
+  .hero::after {
     position: absolute;
-    font-size: 8rem;
-    font-weight: black;
+    font-size: clamp(8rem, 20vh, 18rem);
+    font-weight: 1000;
+    z-index: -1;
+    white-space: nowrap;
+    text-transform: uppercase;
+    opacity: 0.05;
   }
 
-  .intro::before {
+  .hero::before {
     content: "UX/UI Design";
-    top: 4rem;
-    left: 0;
+    top: -0.9em;
+    left: -1em;
   }
 
-  .intro::after {
-    content: "Educator";
-    right: 0;
-    bottom: 6rem;
-    z-index: 0;
+  .hero::after {
+    content: "Education";
+    bottom: -0.9em;
+    right: -2em;
   }
 }

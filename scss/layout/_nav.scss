@@ -1,9 +1,13 @@
 /* 4. Navigation */
 :root {
-  scroll-padding-top: 3em;
+  scroll-padding-top: 4rem;
   scroll-behavior: smooth;
 }
-
+/* Total height of main header is 64.4rem
+    h3 has a size of 1.75rem, a 1.1 lineheight
+    and top and bottom margin of 0.6 em
+    1.75*1.1 + 1.75*0.6*2 = 64.4
+*/
 .main-header {
   background: var(--clr-primary-dark);
   text-align: center;
