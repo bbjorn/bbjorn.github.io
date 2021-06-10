@@ -433,9 +433,9 @@ img.tall {
 
 .results .btn {
   display: block;
-  --btn-clr: var(--clr-primary-dark);
+  --btn-clr: var(--clr-primary);
   background: var(--clr-white);
-  width: 16em;
+  width: 12em;
   margin: 2em auto 0;
   /*border: 4px var(--btn-clr) solid;*/
 }
@@ -515,7 +515,7 @@ footer ul {
   text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
-  width: 16em;
+  min-width: 12em;
   margin: 1.25em auto 1em;
 }
 
@@ -566,7 +566,7 @@ textarea.input1 {
   text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
-  width: 16em;
+  min-width: 12em;
   margin: 1.25em auto 1em;
 }
 

@@ -400,7 +400,7 @@ nav a:focus::before {
   background: var(--clr-primary);
   flex: 0 0 auto;
   margin: 0 auto;
-  width: max-content;
+  min-width: 12em;
 }
 
 @media screen and (min-width: 800px) {
@@ -501,7 +501,7 @@ footer ul {
   text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
-  width: 16em;
+  min-width: 12em;
   margin: 1.25em auto 1em;
 }
 
@@ -552,7 +552,7 @@ textarea.input1 {
   text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
-  width: 16em;
+  min-width: 12em;
   margin: 1.25em auto 1em;
 }
 
@@ -665,9 +665,9 @@ body {
 }
 
 .motivation .btn {
-  --btn-clr: var(--clr-primary-dark);
+  --btn-clr: var(--clr-primary);
   background: var(--clr-white);
-  width: 16em;
+  min-width: 12em;
   margin: 0 auto;
   /*border: 4px var(--btn-clr) solid;*/
 }

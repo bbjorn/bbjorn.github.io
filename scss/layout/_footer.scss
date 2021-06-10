@@ -46,6 +46,6 @@ footer ul {
   text-transform: capitalize;
   --btn-clr: var(--clr-light);
   background: var(--clr-primary);
-  width: 16em;
+  min-width: 12em;
   margin: 1.25em auto 1em;
 }
