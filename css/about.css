@@ -650,10 +650,11 @@ body {
 @media screen and (min-width: 800px) {
   .background img {
     float: right;
-    max-width: 33%;
+    max-width: 27.5%;
     margin-left: 1em;
     margin-bottom: 0.5em;
-    margin-right: 15%;
+    margin-right: 22.5%;
+    transform: scaleX(-1);
   }
 }
 /* 9. Motivation */
