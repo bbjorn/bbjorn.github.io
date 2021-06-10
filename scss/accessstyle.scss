@@ -38,7 +38,6 @@ p {
 /* 6. Intro */
 
 .intro {
-  padding: 4em 0 0;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -46,7 +45,7 @@ p {
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 33%,
-      var(--clr-primary-dark)
+      var(--clr-primary)
     ),
     url("../img/access/ac-customerjourney-trans.png");
   background-size: auto 100%;
@@ -86,14 +85,13 @@ p {
   .intro {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding-top: 3em;
   }
 
   .intro-headers {
     border-bottom: none;
     background-image: radial-gradient(
         rgba(255, 255, 255, 0) 35%,
-        var(--clr-primary-dark) 90%
+        var(--clr-primary) 90%
       ),
       url("../img/access/ac-customerjourney-trans.png");
     background-size: 100% auto;
@@ -116,10 +114,15 @@ p {
 
   .intro-content {
     border-left: 1px solid white;
-  }
+    padding: 2em;
 
-  .intro-content div {
-    max-width: max-content;
+    div {
+      max-width: max-content;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -127,10 +130,6 @@ p {
   .intro {
     padding-top: 0;
     margin: 1.5em 1.5em 0;
-  }
-
-  .intro-content {
-    padding-top: 0.5em;
   }
 }
 

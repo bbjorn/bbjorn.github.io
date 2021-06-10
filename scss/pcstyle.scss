@@ -42,10 +42,6 @@ p {
 
 /* 6. Intro */
 
-.intro {
-  padding-top: 3rem;
-}
-
 .intro-headers {
   background-image: linear-gradient(
       to bottom,
@@ -110,8 +106,17 @@ p {
     text-align: right;
   }
 
-  .intro-content div {
-    max-width: max-content;
+  .intro-content {
+    border-left: 1px solid white;
+    padding: 2em;
+
+    div {
+      max-width: max-content;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -119,10 +124,6 @@ p {
   .intro {
     padding-top: 0;
     margin: 1.5em 1.5em 0;
-  }
-
-  .intro-content {
-    padding-top: 0.5em;
   }
 }
 

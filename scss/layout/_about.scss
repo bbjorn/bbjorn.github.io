@@ -76,7 +76,7 @@
 
   .about-content {
     border-left: 1px solid var(--clr-light);
-    padding: 3em 1.5em 2em;
+    padding: 2em;
   }
 
   .about-content div {
@@ -85,6 +85,10 @@
 
   .about-content p {
     text-align: left;
+  }
+
+  .about-content p:first-child {
+    margin-top: 0;
   }
 }
 

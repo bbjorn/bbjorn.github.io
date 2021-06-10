@@ -38,7 +38,6 @@ p {
 /* 6. Intro */
 
 .intro {
-  padding: 4em 0 0;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -103,7 +102,6 @@ p {
   .intro {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding-top: 3em;
     background-color: var(--clr-primary-dark);
   }
 
@@ -143,10 +141,15 @@ p {
 
   .intro-content {
     border-left: 1px solid white;
-  }
+    padding: 2em;
 
-  .intro-content div {
-    max-width: max-content;
+    div {
+      max-width: max-content;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
   }
 }
 
