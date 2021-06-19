@@ -38,6 +38,11 @@ body {
   color: var(--clr-dark);
 }
 
+@media screen and (min-width: 1000px) {
+  body {
+    background: var(--clr-light);
+  }
+}
 img {
   max-width: 100%;
 }
@@ -386,16 +391,34 @@ img.tall {
   display: block;
 }
 
+.sec svg {
+  max-width: 100%;
+}
+
+.textblock h3 {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.textblock p {
+  margin: 0.5rem auto;
+}
+.textblock p:last-child {
+  margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 800px) {
   .sec {
     padding: 3em 2em;
   }
-
   .sec h2 {
     margin-bottom: 1.5em;
   }
+  .sec:last-of-type {
+    padding-bottom: 4rem;
+  }
 
-  .container {
+  .sec .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;

@@ -12,6 +12,12 @@ body {
   color: var(--clr-dark);
 }
 
+@media screen and (min-width: 1000px) {
+  body {
+    background: var(--clr-light);
+  }
+}
+
 img {
   max-width: 100%;
 }

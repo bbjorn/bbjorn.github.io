@@ -38,6 +38,11 @@ body {
   color: var(--clr-dark);
 }
 
+@media screen and (min-width: 1000px) {
+  body {
+    background: var(--clr-light);
+  }
+}
 img {
   max-width: 100%;
 }
@@ -548,7 +553,7 @@ nav a:focus::before {
 }
 @media screen and (min-width: 1000px) {
   body {
-    background-color: var(--clr-light);
+    overflow-x: hidden;
   }
 
   .intro {
@@ -563,6 +568,7 @@ nav a:focus::before {
     box-sizing: border-box;
     max-width: 1000px;
     margin: 0 auto;
+    overflow-x: hidden;
     overflow: visible;
   }
 
