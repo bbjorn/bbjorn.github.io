@@ -17,6 +17,10 @@
   object-fit: cover;
 }
 
+.sec svg {
+  max-width: 100%;
+}
+
 /* removing the space means the img and .tall are both part of the same selector */
 img.tall {
   width: auto;
@@ -25,15 +29,20 @@ img.tall {
   display: block;
 }
 
-.sec svg {
-  max-width: 100%;
+img.short {
+  object-fit: scale-down;
+}
+
+img.phone {
+  border: 0.2rem solid var(--clr-primary-dark);
 }
 
 .textblock {
   & h3 {
+    text-align: center;
     margin-bottom: 0;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   & p {
     margin: 0.5rem auto;

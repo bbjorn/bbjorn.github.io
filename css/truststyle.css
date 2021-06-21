@@ -16,9 +16,9 @@
   --clr-dark: #262626;
   --clr-light: #eee;
   --clr-white: white;
-  --clr-primary-dark: hsl(160, 33%, 25%);
-  --clr-primary: hsl(160, 36%, 45%);
-  --clr-primary-light: hsl(160, 45%, 86%);
+  --clr-primary-dark: hsl(223, 22%, 25%);
+  --clr-primary: hsl(223, 36%, 45%);
+  --clr-primary-light: hsl(223, 45%, 86%);
   --clr-overlay-brighten: rgba(255, 255, 255, 0.2);
   --clr-overlay-darken: rgba(0, 0, 0, 0.15);
   --clr-overlay-darken-30: rgba(0, 0, 0, 0.3);
@@ -383,6 +383,10 @@ main {
   object-fit: cover;
 }
 
+.sec svg {
+  max-width: 100%;
+}
+
 /* removing the space means the img and .tall are both part of the same selector */
 img.tall {
   width: auto;
@@ -391,14 +395,19 @@ img.tall {
   display: block;
 }
 
-.sec svg {
-  max-width: 100%;
+img.short {
+  object-fit: scale-down;
+}
+
+img.phone {
+  border: 0.2rem solid var(--clr-primary-dark);
 }
 
 .textblock h3 {
+  text-align: center;
   margin-bottom: 0;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .textblock p {
   margin: 0.5rem auto;
@@ -648,7 +657,7 @@ p {
 /* 5. Main */
 /* 6. Intro */
 .intro-headers {
-  background-image: linear-gradient(to bottom, rgba(73, 156, 129, 0.2) 0%, rgba(43, 85, 71, 0.8) 100%), url("../img/trust/catandvacuum.jpg");
+  background-image: linear-gradient(to bottom, rgba(73, 97, 156, 0.2) 0%, rgba(50, 58, 78, 0.8) 100%), url("../img/trust/catandvacuum.jpg");
   background-size: auto 100%;
   background-position: center center;
   padding: 4em 2em 2em;
