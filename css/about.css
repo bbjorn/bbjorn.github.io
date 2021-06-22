@@ -296,7 +296,7 @@ nav a:focus {
 
   header {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr 200px minmax(600px, 3fr) 1fr;
   }
 
   .logo {
@@ -345,6 +345,24 @@ nav a:focus::before {
   section#about:hover ~ nav a[href="#about"] {
     background-color: red;
   }*/
+}
+@media screen and (min-width: 1000px) {
+  header {
+    grid-template-columns: 1fr 200px minmax(auto, 800px) 1fr;
+  }
+
+  .logo {
+    margin-left: 1.5rem;
+    grid-column: 2/span 1;
+  }
+  .logo h3 {
+    text-align: left;
+    margin: 0.6em 0;
+  }
+
+  nav {
+    margin-right: 1.5rem;
+  }
 }
 main {
   margin-top: 4rem;
