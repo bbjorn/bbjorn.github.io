@@ -1009,7 +1009,10 @@ nav a:focus::before {
 
 @media screen and (min-width: 800px) {
   .ux-text {
-    max-width: 65ch;
+    max-width: 60ch;
+  }
+  .ux-text p {
+    max-width: 100%;
   }
 
   .ux-grid {
