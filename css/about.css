@@ -559,7 +559,7 @@ footer ul {
 }
 .input1:focus {
   border-color: var(--clr-primary);
-  padding: 4px 6px 20px 6px;
+  padding: 4px 6px 16px 6px;
 }
 .input1:focus + label {
   background: var(--clr-primary);
