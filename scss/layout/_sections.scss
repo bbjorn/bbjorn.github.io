@@ -21,6 +21,15 @@
   max-width: 100%;
 }
 
+.sec a {
+  color: var(--clr-primary-dark);
+  font-weight: 700;
+}
+
+.sec a:visited {
+  color: var(--clr-primary);
+}
+
 /* removing the space means the img and .tall are both part of the same selector */
 img.tall {
   width: auto;
@@ -35,6 +44,7 @@ img.short {
 
 img.phone {
   border: 0.2rem solid var(--clr-primary-dark);
+  height: 22em;
 }
 
 .textblock {
@@ -70,6 +80,7 @@ img.phone {
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
     gap: 2em;
+    place-items: center;
   }
 
   .container .left {

@@ -137,20 +137,4 @@ p {
 
 /* 9. Results */
 
-/* .results img did not have any styling before adding the result partial */
-
-@media screen and (min-width: 800px) {
-  .captions {
-    float: right;
-    max-width: 33%;
-    margin-left: 1em;
-    margin-bottom: 0;
-    margin-right: 15%;
-  }
-
-  .results img {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
 /* 10. Footer */

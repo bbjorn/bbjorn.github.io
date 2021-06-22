@@ -9,7 +9,7 @@
   display: block;
   margin-top: 0;
   color: var(--clr-primary-dark);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .results a:visited {
@@ -34,8 +34,16 @@
   margin: 0 auto;
 }
 
+#enlarger {
+  display: none;
+
+  & + label p {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 800px) {
-  .results img {
+  .results > img {
     float: right;
     max-width: 33%;
     max-height: 40vh;
@@ -50,5 +58,69 @@
     margin-left: 1em;
     margin-bottom: 0;
     margin-right: 15%;
+
+    & img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  #enlarger {
+    & + label {
+      display: block;
+      cursor: pointer;
+    }
+
+    & + label p {
+      display: block;
+    }
+
+    & + label::before,
+    & + label::after {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+
+      pointer-events: none;
+    }
+
+    & + label::before {
+      transform: translate(-50%, -50%);
+      width: 110%;
+      height: 110%;
+      z-index: 1000;
+      background-color: var(--clr-overlay-darken-30);
+
+      transition: opacity 350ms ease-in 150ms;
+    }
+
+    & + label::after {
+      height: min(75vw, 75vh);
+      width: min(90vw, 100vh);
+      background-color: white;
+      background-image: var(--enlarge-img);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      border: 1em solid white;
+      border-radius: 1em;
+      z-index: 1001;
+      transform: translate(-50%, -50%);
+      transition: opacity 250ms ease-out;
+      transform-origin: top left;
+    }
+
+    &:checked + label::before {
+      opacity: 1;
+      pointer-events: initial;
+      transition: opacity 250ms ease-out;
+    }
+
+    &:checked + label::after {
+      opacity: 1;
+      pointer-events: initial;
+      transition: opacity 250ms ease-in;
+    }
   }
 }

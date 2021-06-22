@@ -387,6 +387,15 @@ main {
   max-width: 100%;
 }
 
+.sec a {
+  color: var(--clr-primary-dark);
+  font-weight: 700;
+}
+
+.sec a:visited {
+  color: var(--clr-primary);
+}
+
 /* removing the space means the img and .tall are both part of the same selector */
 img.tall {
   width: auto;
@@ -401,6 +410,7 @@ img.short {
 
 img.phone {
   border: 0.2rem solid var(--clr-primary-dark);
+  height: 22em;
 }
 
 .textblock h3 {
@@ -432,6 +442,7 @@ img.phone {
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
     gap: 2em;
+    place-items: center;
   }
 
   .container .left {
@@ -460,7 +471,7 @@ img.phone {
   display: block;
   margin-top: 0;
   color: var(--clr-primary-dark);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .results a:visited {
@@ -485,8 +496,15 @@ img.phone {
   margin: 0 auto;
 }
 
+#enlarger {
+  display: none;
+}
+#enlarger + label p {
+  display: none;
+}
+
 @media screen and (min-width: 800px) {
-  .results img {
+  .results > img {
     float: right;
     max-width: 33%;
     max-height: 40vh;
@@ -501,6 +519,58 @@ img.phone {
     margin-left: 1em;
     margin-bottom: 0;
     margin-right: 15%;
+  }
+  .captions img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #enlarger + label {
+    display: block;
+    cursor: pointer;
+  }
+  #enlarger + label p {
+    display: block;
+  }
+  #enlarger + label::before, #enlarger + label::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #enlarger + label::before {
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    z-index: 1000;
+    background-color: var(--clr-overlay-darken-30);
+    transition: opacity 350ms ease-in 150ms;
+  }
+  #enlarger + label::after {
+    height: min(75vw, 75vh);
+    width: min(90vw, 100vh);
+    background-color: white;
+    background-image: var(--enlarge-img);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 1em solid white;
+    border-radius: 1em;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    transition: opacity 250ms ease-out;
+    transform-origin: top left;
+  }
+  #enlarger:checked + label::before {
+    opacity: 1;
+    pointer-events: initial;
+    transition: opacity 250ms ease-out;
+  }
+  #enlarger:checked + label::after {
+    opacity: 1;
+    pointer-events: initial;
+    transition: opacity 250ms ease-in;
   }
 }
 /* 10. Footer */
@@ -757,6 +827,10 @@ p {
 
 /* 7. Sections */
 /* 8. Results */
+.enlarge {
+  --enlarge-img: url(../img/trust/TrustDiagram.svg);
+}
+
 /* 9. Footer */
 
 /*# sourceMappingURL=truststyle.css.map */
