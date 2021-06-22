@@ -734,15 +734,12 @@ nav a:focus::before {
   min-height: 100vh;
 }
 
-.educator,
-.code {
-  padding: 2em 2em 6em;
+.educode {
   min-height: 100vh;
 }
 
 .ux img,
-.educator img,
-.code img {
+.educode img {
   border-radius: 0.5em;
 }
 
@@ -1027,43 +1024,118 @@ nav a:focus::before {
   }
 }
 /* 9. Educator and Code */
-.educator div,
-.code div {
-  max-width: 50ch;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-.educator img,
-.code img {
-  width: 100%;
-  height: 20em;
-  object-fit: cover;
-  margin: 0 auto;
-  display: block;
-}
-.educator p:first-of-type,
-.code p:first-of-type {
-  order: -1;
-}
-.educator a,
-.code a {
-  color: var(--clr-primary);
-  font-weight: 700;
-}
-
-.educator img {
+.duckimg {
   object-position: 80% 50%;
 }
 
-@media screen and (min-width: 800px) {
-  .educator div,
-.code div {
-    max-width: 60ch;
+@media screen and (min-width: 1000px) {
+  .educode {
+    background-color: var(--clr-white);
+    border: var(--clr-primary-dark) 1.5em solid;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 4em auto 6em;
+    display: flex;
+    flex-direction: column;
   }
-  .educator p,
-.code p {
-    max-width: 60ch;
+
+  .educode.bg-light {
+    background-color: var(--clr-white);
+  }
+}
+.educode--wrapper {
+  padding: 2em 2em;
+}
+
+.captions p {
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.container img {
+  border-radius: 0.5em;
+  width: 100%;
+  height: 16em;
+  object-fit: cover;
+}
+
+.educode--wrapper svg {
+  max-width: 100%;
+}
+
+.educode--wrapper a {
+  color: var(--clr-primary-dark);
+  font-weight: 700;
+}
+
+.educode--wrapper a:visited {
+  color: var(--clr-primary);
+}
+
+/* removing the space means the img and .tall are both part of the same selector */
+img.tall {
+  width: auto;
+  max-width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+img.short {
+  object-fit: scale-down;
+}
+
+img.phone {
+  border: 0.2rem solid var(--clr-primary-dark);
+  height: 22em;
+}
+
+.textblock h3 {
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.textblock p {
+  margin: 0.5rem auto;
+}
+.textblock p:last-child {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .educode--wrapper {
+    padding: 3em 2em;
+  }
+  .educode--wrapper h2 {
+    margin-bottom: 1.5em;
+  }
+  .educode--wrapper:last-of-type {
+    padding-bottom: 4rem;
+  }
+
+  .educode--wrapper .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+    gap: 2em;
+    place-items: center;
+  }
+
+  .container .left {
+    grid-column: 1/2;
+  }
+
+  .container .right {
+    grid-column: 2/3;
+  }
+
+  .textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 /* 10. Footer */
