@@ -350,9 +350,9 @@ nav a:focus::before {
     background-color: red;
   }*/
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   header {
-    grid-template-columns: 1fr 200px minmax(auto, 800px) 1fr;
+    grid-template-columns: 1fr 500px minmax(auto, 500px) 1fr;
   }
 
   .logo {
@@ -366,6 +366,13 @@ nav a:focus::before {
 
   nav {
     margin-right: 1.5rem;
+  }
+  nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+  nav li {
+    margin: 0;
   }
 }
 /* 5. Intro */
@@ -1100,6 +1107,7 @@ img.phone {
 }
 .textblock p {
   margin: 0.5rem auto;
+  max-width: 60ch;
 }
 .textblock p:last-child {
   margin-bottom: 2rem;

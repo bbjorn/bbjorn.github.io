@@ -194,9 +194,9 @@ nav {
   }*/
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   header {
-    grid-template-columns: 1fr 200px minmax(auto, 800px) 1fr;
+    grid-template-columns: 1fr 500px minmax(auto, 500px) 1fr;
   }
 
   .logo {
@@ -211,5 +211,13 @@ nav {
 
   nav {
     margin-right: 1.5rem;
+
+    & ul {
+      width: 100%;
+      justify-content: space-between;
+    }
+    & li {
+      margin: 0;
+    }
   }
 }
