@@ -47,6 +47,11 @@ img {
   max-width: 100%;
 }
 
+::selection {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
 *::before,
