@@ -26,6 +26,11 @@
   color: var(--card-clr);
 }
 
+.card p::selection,
+.card-btn::selection {
+  background-color: var(--card-clr);
+}
+
 .card-svg {
   stroke: var(--card-clr);
   stroke-width: 0.25mm;
