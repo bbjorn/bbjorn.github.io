@@ -1040,6 +1040,10 @@ nav a:focus::before {
   object-position: 80% 50%;
 }
 
+.educode h2 {
+  margin-top: 1.5em;
+}
+
 @media screen and (min-width: 1000px) {
   .educode {
     background-color: var(--clr-white);
@@ -1053,10 +1057,6 @@ nav a:focus::before {
 
   .educode.bg-light {
     background-color: var(--clr-white);
-  }
-
-  .educode h2 {
-    margin-top: 1.5em;
   }
 }
 .educode--wrapper {
