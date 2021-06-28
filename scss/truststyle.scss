@@ -49,7 +49,7 @@ p {
       hsl(223, 22%, 25%, 0.8) 100%
     ),
     url("../img/trust/catandvacuum.jpg");
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center center;
   padding: 4em 2em 2em;
   border-bottom: var(--clr-light) 2px solid;
@@ -58,12 +58,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 400px) {
-  .intro-headers {
-    background-size: 100% auto;
-  }
 }
 
 .intro-headers h3 {
@@ -89,7 +83,6 @@ p {
 
   .intro-headers {
     border-bottom: none;
-    background-size: auto 100%;
   }
 
   .intro-headers h2 {

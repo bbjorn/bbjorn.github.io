@@ -758,7 +758,7 @@ p {
 /* 6. Intro */
 .intro-headers {
   background-image: linear-gradient(to bottom, rgba(73, 97, 156, 0.2) 0%, rgba(50, 58, 78, 0.8) 100%), url("../img/trust/catandvacuum.jpg");
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center center;
   padding: 4em 2em 2em;
   border-bottom: var(--clr-light) 2px solid;
@@ -768,11 +768,6 @@ p {
   align-items: center;
 }
 
-@media screen and (min-width: 400px) {
-  .intro-headers {
-    background-size: 100% auto;
-  }
-}
 .intro-headers h3 {
   position: relative;
   z-index: 1;
@@ -796,7 +791,6 @@ p {
 
   .intro-headers {
     border-bottom: none;
-    background-size: auto 100%;
   }
 
   .intro-headers h2 {
