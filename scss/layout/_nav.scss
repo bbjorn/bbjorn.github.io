@@ -196,11 +196,12 @@ nav {
 
 @media screen and (min-width: 1000px) {
   header {
-    grid-template-columns: 1fr 500px minmax(auto, 500px) 1fr;
+    grid-template-columns:
+      1fr 500px minmax(auto, 500px)
+      1fr;
   }
 
   .logo {
-    margin-left: 1.5rem;
     grid-column: 2 / span 1;
 
     & h3 {
@@ -210,8 +211,6 @@ nav {
   }
 
   nav {
-    margin-right: 1.5rem;
-
     & ul {
       width: 100%;
       justify-content: space-between;
