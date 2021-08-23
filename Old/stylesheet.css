@@ -57,7 +57,7 @@ body {
 /** Header styles **/
 
 .header {
-  background: url("img/BgDusk.jpg") no-repeat top center;
+  background: url("../img/BgDusk.jpg") no-repeat top center;
   background-attachment: fixed;
   padding: 25px;
 }
