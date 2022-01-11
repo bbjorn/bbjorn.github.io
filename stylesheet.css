@@ -1,0 +1,297 @@
+/* Found this on StackOverflow */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+
+/* Navbar menu */
+.ul-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(145, 160, 175);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.li-navbar {
+  float: left;
+}
+
+.li-navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.li-navbar a:hover {
+  background-color: rgb(135, 150, 165);
+}
+
+.active {
+  background-color: rgb(155, 175, 190);
+}
+
+.subcathegory {
+  background-color: rgb(155, 175, 190);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f7f7f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    #f7f7f7 0%,
+    rgb(242, 245, 248) 100%
+  );
+  /* Chrome10-25,Safari5.1-6  */
+  background: linear-gradient(45deg, #f7f7f7 0%, rgb(242, 245, 248) 100%);
+}
+
+/** Header styles **/
+
+.header {
+  background: url("img/BgDusk.jpg") no-repeat top center;
+  background-attachment: fixed;
+  padding: 25px;
+}
+
+h1 {
+  color: rgb(242, 245, 248);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 25%;
+}
+
+/** List style **/
+
+h2 {
+  background-color: rgb(145, 160, 175);
+  background-color: rgba(145, 160, 175, 0.75);
+  color: rgb(242, 245, 248);
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  padding: 2px;
+}
+
+h3 {
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.liststyle-ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+/* Changes screen width with aspect ratio */
+@media screen and (max-aspect-ratio: 16/9) {
+  .liststyle-ul {
+    width: 65%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 11/10) {
+  .liststyle-ul {
+    width: 75%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 10/11) {
+  .liststyle-ul {
+    width: 90%;
+  }
+}
+
+.liststyle-li {
+  border-bottom: 1px solid rgb(145, 160, 175);
+  list-style: none;
+  margin: 100px 0px;
+  padding-bottom: 60px;
+}
+
+p {
+  color: #444444;
+  line-height: 32px;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+a {
+  color: rgb(145, 160, 175);
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  text-decoration: none;
+}
+
+li {
+  color: #444444;
+  line-height: 32px;
+  font-family: "bree_serifregular", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+footer {
+  background-color: rgb(235, 240, 245);
+}
+
+.img-designintro {
+  float: right;
+  margin-left: 15px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-designmiddle {
+  left: 50%;
+  width: 70%;
+  vertical-align: bottom;
+}
+
+.img-designresults {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 10px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "intro-left intro-right";
+}
+
+.intro-left {
+  grid-area: intro-left;
+}
+
+.intro-right {
+  grid-area: intro-right;
+}
+
+.about-me-grid-container {
+  display: grid;
+  grid-template-columns: 65% auto;
+  grid-template-areas: "aboutme-left aboutme-right";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.aboutme-left {
+  grid-area: intro-left;
+}
+
+.aboutme-right {
+  grid-area: intro-right;
+}
+
+.pres-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "preslefttop presright" "presleftbottom presright";
+}
+
+.preslefttop {
+  grid-area: preslefttop;
+}
+
+.presleftbottom {
+  grid-area: presleftbottom;
+  display: flex;
+  align-items: flex-end;
+}
+
+.presright {
+  grid-area: presright;
+}
+
+/* Button matrix for the calculator */
+.btn-matrix > .btn:nth-child(4n + 5) {
+  clear: left;
+  margin-left: 0;
+}
+.btn-matrix > .btn:nth-child(n + 5) {
+  margin-top: -1px;
+}
+.btn-matrix > .btn:first-child {
+  border-bottom-left-radius: 0;
+}
+.btn-matrix > .btn:nth-child(3) {
+  border-top-right-radius: 4px !important;
+}
+.btn-matrix > .btn:nth-last-child(3) {
+  border-bottom-left-radius: 4px !important;
+}
+.btn-matrix > .btn:last-child {
+  border-top-right-radius: 0;
+}
+
+/* Decorations */
+.btn-matrix {
+  margin: 20px;
+}
+
+/* Custom Button */
+.btn-calc {
+  font-family: monospace;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(145, 160, 175);
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 0 9px #999; */
+}
+
+.btn-calc:hover {
+  background-color: rgb(145, 160, 175);
+}
+
+.btn-calc:active {
+  background-color: rgb(145, 160, 175);
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(4px);
+}

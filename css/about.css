@@ -48,6 +48,11 @@ img {
   max-width: 100%;
 }
 
+::-moz-selection {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
 ::selection {
   background-color: var(--clr-primary);
   color: var(--clr-white);
@@ -57,7 +62,8 @@ img {
   *,
 *::before,
 *::after {
-    animation-duration: 0.01ms !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     transition-delay: 0ms !important;
@@ -146,6 +152,8 @@ p {
   --underline-clr: var(--clr-primary);
   color: var(--underline-clr);
   position: relative;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -491,6 +499,8 @@ main {
   }
 
   .about-content div {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
   }
 
@@ -720,6 +730,4 @@ body {
   min-width: 12em;
   margin: 0 auto;
   /*border: 4px var(--btn-clr) solid;*/
-}
-
-/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=about.css.map */

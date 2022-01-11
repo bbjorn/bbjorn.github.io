@@ -1160,6 +1160,9 @@ img.phone {
     flex-direction: column;
     justify-content: center;
   }
+  .textblock p:last-child {
+    margin-bottom: 0.5em;
+  }
 }
 /* 10. Footer */
 footer {

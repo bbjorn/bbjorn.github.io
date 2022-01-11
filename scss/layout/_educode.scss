@@ -157,5 +157,9 @@ img.phone {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    & p:last-child {
+      margin-bottom: 0.5em;
+    }
   }
 }
